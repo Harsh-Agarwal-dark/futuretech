@@ -89,7 +89,7 @@ const ResumeSelectorPage = () => {
         <div className="page-container">
             <nav className="home-nav">
                 <div className="nav-logo">
-                    <a href="/index2.html">
+                    <a href="/landing.html">
                         <img src="/logo.png" alt="Future Tech" style={{ height: '40px', width: 'auto' }} />
                     </a>
                 </div>

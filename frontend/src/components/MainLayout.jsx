@@ -18,7 +18,7 @@ const MainLayout = ({ sidebar, children, preview, isSaving, lastSaved, onDownloa
                     >
                         ☰
                     </button>
-                    <a href="/index2.html">
+                    <a href="/landing.html">
                         <img src="/logo.png" alt="Future Tech" style={{ height: '40px', width: 'auto' }} />
                     </a>
                 </div>
