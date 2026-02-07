@@ -64,8 +64,14 @@ def get_gcs_credentials():
                     env_var_name = cred_source.get("environment_variable")
                     token_value = os.getenv(env_var_name)
                     
+                    # Debug: Print all environment variables that start with RAILWAY
+                    print(f"🔍 Checking for environment variable: {env_var_name}")
+                    railway_vars = {k: v[:20] + "..." if len(v) > 20 else v for k, v in os.environ.items() if k.startswith("RAILWAY")}
+                    print(f"🔍 Available RAILWAY_* variables: {list(railway_vars.keys())}")
+                    
                     if token_value:
                         print(f"✅ Found OIDC token in environment variable: {env_var_name}")
+                        print(f"🔍 Token preview: {token_value[:30]}..." if len(token_value) > 30 else f"🔍 Token: {token_value}")
                         
                         # Create a temporary file with the token
                         import tempfile
@@ -79,7 +85,9 @@ def get_gcs_credentials():
                         print(f"✅ Converted environment_variable to file: {token_file.name}")
                     else:
                         print(f"❌ Environment variable {env_var_name} not found")
-                        raise ValueError(f"Environment variable {env_var_name} is required but not set")
+                        print(f"❌ This is a FATAL error - cannot proceed without OIDC token")
+                        # Don't fall back to ADC on Railway - it will timeout
+                        raise ValueError(f"CRITICAL: Environment variable {env_var_name} is required but not set. Railway OIDC token is missing!")
                 
                 # If using environment_id, the token should already be in the env var
                 elif "environment_id" in cred_source:
