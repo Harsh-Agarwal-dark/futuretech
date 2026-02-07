@@ -528,16 +528,15 @@
                                 id="pricing-primary-navbar"
                                 class="desktop-navbar-items track-class w-nav-link">Fee</a><a href="#faqs"
                                 id="faqs-primary-navbar" class="desktop-navbar-items track-class w-nav-link">FAQs</a><a
-                                id="login-primary-navbar" href="/login"
-                                class="link-block-599 track-class w-inline-block">
+                                id="login-primary-navbar" href="/" class="link-block-599 track-class w-inline-block">
                                 <div>Login</div>
                                 <div class="navhome-login-arrow"></div>
                             </a>
-                            <a id="builder-primary-navbar" href="/resumes"
-                                class="desktop-navbar-items track-class w-nav-link" style="display: none;">Resume
+                            <a id="builder-primary-navbar" href="/" class="desktop-navbar-items track-class w-nav-link"
+                                style="display: none;">Resume
                                 Builder</a>
-                            <a id="profile-primary-navbar" href="/profile"
-                                class="link-block-599 track-class w-inline-block" style="display: none;">
+                            <a id="profile-primary-navbar" href="/" class="link-block-599 track-class w-inline-block"
+                                style="display: none;">
                                 <div>Profile</div>
                                 <div class="navhome-login-arrow"></div>
                             </a>
@@ -10674,7 +10673,32 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
                 // User is logged out
                 if (loginBtn) loginBtn.style.display = 'flex';
                 if (profileBtn) profileBtn.style.display = 'none';
-                if (builderBtn) builderBtn.style.display = 'none';
+                if (builderBtn) profileBtn.style.display = 'none';
+            }
+
+            // Add click handlers to navigate to React app with correct route
+            if (loginBtn) {
+                loginBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    sessionStorage.setItem('redirectAfterLoad', '/login');
+                    window.location.href = '/';
+                });
+            }
+
+            if (builderBtn) {
+                builderBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    sessionStorage.setItem('redirectAfterLoad', '/resumes');
+                    window.location.href = '/';
+                });
+            }
+
+            if (profileBtn) {
+                profileBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    sessionStorage.setItem('redirectAfterLoad', '/profile');
+                    window.location.href = '/';
+                });
             }
         });
     </script>

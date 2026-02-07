@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
 import HomePage from './pages/HomePage'
 import BuilderPage from './pages/BuilderPage'
@@ -11,6 +11,17 @@ import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    // Check if we need to redirect from landing page
+    const redirectPath = sessionStorage.getItem('redirectAfterLoad')
+    if (redirectPath) {
+      sessionStorage.removeItem('redirectAfterLoad')
+      navigate(redirectPath)
+    }
+  }, [navigate])
+
   return (
     <AuthProvider>
       <Routes>
