@@ -822,12 +822,7 @@
                                         <div class="w-slider-nav"></div>
                                     </div>
                                 </div>
-                                <!-- <div class="div-block-183198052211">
-                                    <div class="text-block-94128923">Product of</div>
-                                    <div class="html-embed-41921 w-embed"><img
-                                            srcset='https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/nxtwave-logo.svg'
-                                            sizes="(max-width: 479px) 100vw" alt='' loading='lazy' /></div>
-                                </div> -->
+
                             </div>
                         </div>
                     </div>
@@ -10650,14 +10645,30 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
             const profileBtn = document.getElementById('profile-primary-navbar');
             const builderBtn = document.getElementById('builder-primary-navbar');
 
-            // Check for Supabase session in localStorage
-            // Key format: sb-<project-ref>-auth-token
-            const session = localStorage.getItem('sb-gsqpobjgxrkeyxfqlakb-auth-token');
+            // Check for any Supabase auth token in localStorage
+            let isLoggedIn = false;
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.includes('auth-token')) {
+                    try {
+                        const value = localStorage.getItem(key);
+                        if (value) {
+                            const parsed = JSON.parse(value);
+                            if (parsed && parsed.access_token) {
+                                isLoggedIn = true;
+                                break;
+                            }
+                        }
+                    } catch (e) {
+                        // Not a valid JSON, skip
+                    }
+                }
+            }
 
-            if (session) {
+            if (isLoggedIn) {
                 // User is logged in
                 if (loginBtn) loginBtn.style.display = 'none';
-                if (profileBtn) profileBtn.style.display = 'flex'; // Restore original display type
+                if (profileBtn) profileBtn.style.display = 'flex';
                 if (builderBtn) builderBtn.style.display = 'flex';
             } else {
                 // User is logged out
