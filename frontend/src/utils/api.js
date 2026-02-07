@@ -45,8 +45,13 @@ export const generateResumePDF = async (resumeData) => {
         });
 
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.detail || 'Failed to generate PDF');
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Failed to generate PDF');
+            } else {
+                throw new Error(`Server error (${response.status}): Failed to generate PDF`);
+            }
         }
 
         const blob = await response.blob();

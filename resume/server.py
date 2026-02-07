@@ -109,7 +109,7 @@ async def generate_resume_pdf(request: GenerateRequest, background_tasks: Backgr
     Generates a PDF resume and handles background upload to GCS.
     Returns the PDF file directly for immediate download.
     """
-    print(f"\n🚀 [v3-immediate] Received Generate Request for user: {request.user_id}, resume: {request.resume_id}")
+    print(f"\n🚀 [v4-failsafe] Received Generate Request for user: {request.user_id}, resume: {request.resume_id}")
     try:
         resume = request.resume
         user_id = request.user_id
@@ -126,16 +126,21 @@ async def generate_resume_pdf(request: GenerateRequest, background_tasks: Backgr
         if pdf_path and os.path.exists(pdf_path):
             print(f"✅ PDF generated at: {pdf_path}")
             
-            # Read PDF content for background upload
-            with open(pdf_path, "rb") as f:
-                file_content = f.read()
-            
-            # Schedule GCS upload and Supabase sync in the background
-            # This is NON-BLOCKING. The user gets the PDF even if this fails.
-            print("⏳ [Background] Scheduling GCS upload...")
-            background_tasks.add_task(upload_resume_to_gcs, user_id, resume_id, file_content)
+            try:
+                # Read PDF content for background upload
+                with open(pdf_path, "rb") as f:
+                    file_content = f.read()
+                
+                # Schedule GCS upload and Supabase sync in the background
+                # This is FULLY DECOUPLED. The response is returned separately.
+                print("⏳ [Background] Scheduling GCS upload task...")
+                background_tasks.add_task(upload_resume_to_gcs, user_id, resume_id, file_content)
+            except Exception as e:
+                print(f"⚠️  Warning: Failed to schedule background upload: {e}")
+                # We continue anyway to ensure the user gets the PDF
             
             print("🚀 [Success] Returning PDF for immediate download!")
+            # Note: We return the file directly. This is the fastest possible way.
             return FileResponse(
                 path=pdf_path,
                 filename=f"{filename}.pdf",
