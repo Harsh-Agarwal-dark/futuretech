@@ -109,7 +109,7 @@ async def generate_resume_pdf(request: GenerateRequest, background_tasks: Backgr
     Generates a PDF resume and handles background upload to GCS.
     Returns the PDF file directly for immediate download.
     """
-    print(f"\n🚀 Received Generate Request for user: {request.user_id}, resume: {request.resume_id}")
+    print(f"\n🚀 [v3-immediate] Received Generate Request for user: {request.user_id}, resume: {request.resume_id}")
     try:
         resume = request.resume
         user_id = request.user_id
@@ -131,10 +131,11 @@ async def generate_resume_pdf(request: GenerateRequest, background_tasks: Backgr
                 file_content = f.read()
             
             # Schedule GCS upload and Supabase sync in the background
-            print("☁️  Scheduling background upload to Google Cloud Storage...")
+            # This is NON-BLOCKING. The user gets the PDF even if this fails.
+            print("⏳ [Background] Scheduling GCS upload...")
             background_tasks.add_task(upload_resume_to_gcs, user_id, resume_id, file_content)
             
-            print("🎉 Returning PDF for immediate download!")
+            print("🚀 [Success] Returning PDF for immediate download!")
             return FileResponse(
                 path=pdf_path,
                 filename=f"{filename}.pdf",
