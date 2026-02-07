@@ -20,7 +20,7 @@ from src.agents.enhancer_agent import EnhancerAgent
 from src.agents.skills_analyzer import SkillsAnalyzer
 from src.generators.resume_generator import ResumeGenerator
 from src.schemas.resume_schema import Resume
-from src.utils.cloud_storage import upload_resume_to_gcs, get_signed_url
+from src.utils.cloud_storage import upload_resume_to_gcs
 
 app = FastAPI()
 
