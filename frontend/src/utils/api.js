@@ -49,19 +49,21 @@ export const generateResumePDF = async (resumeData) => {
             throw new Error(errorData.detail || 'Failed to generate PDF');
         }
 
-        const data = await response.json();
+        const blob = await response.blob();
 
         // Trigger automatic download
-        if (data.download_url) {
-            const link = document.createElement('a');
-            link.href = data.download_url;
-            link.download = data.filename || `resume_${resumeData.id}.pdf`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `resume_${resumeData.id}.pdf`;
+        document.body.appendChild(link);
+        link.click();
 
-        return data; // contains gcs_path and download_url
+        // Cleanup
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+
+        return { message: 'PDF generated and download started' }; // contains gcs_path and download_url
     } catch (error) {
         console.error('Error generating PDF:', error);
         throw error;

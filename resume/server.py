@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
@@ -104,9 +104,10 @@ async def process_resume_endpoint(resume: Resume):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/generate")
-async def generate_resume_pdf(request: GenerateRequest):
+async def generate_resume_pdf(request: GenerateRequest, background_tasks: BackgroundTasks):
     """
-    Generates a TeX and PDF, uploads to GCS, and returns the path and signed URL.
+    Generates a PDF resume and handles background upload to GCS.
+    Returns the PDF file directly for immediate download.
     """
     print(f"\n🚀 Received Generate Request for user: {request.user_id}, resume: {request.resume_id}")
     try:
@@ -124,25 +125,21 @@ async def generate_resume_pdf(request: GenerateRequest):
         
         if pdf_path and os.path.exists(pdf_path):
             print(f"✅ PDF generated at: {pdf_path}")
-            # Read PDF content for upload
+            
+            # Read PDF content for background upload
             with open(pdf_path, "rb") as f:
                 file_content = f.read()
             
-            # Upload to GCS and Sync to Supabase (logic is now inside the utility)
-            print("☁️  Uploading to Google Cloud Storage...")
-            gcs_path = upload_resume_to_gcs(user_id, resume_id, file_content)
+            # Schedule GCS upload and Supabase sync in the background
+            print("☁️  Scheduling background upload to Google Cloud Storage...")
+            background_tasks.add_task(upload_resume_to_gcs, user_id, resume_id, file_content)
             
-            # Generate temporary download URL (V4 signed)
-            print("🔑 Generating Signed URL...")
-            download_url = get_signed_url(user_id, resume_id)
-            
-            print("🎉 Generation and Upload Complete!")
-            return {
-                "message": "Resume generated, uploaded to GCS, and synced to Supabase successfully",
-                "gcs_path": gcs_path,
-                "download_url": download_url,
-                "filename": f"{filename}.pdf"
-            }
+            print("🎉 Returning PDF for immediate download!")
+            return FileResponse(
+                path=pdf_path,
+                filename=f"{filename}.pdf",
+                media_type="application/pdf"
+            )
         else:
             print("❌ PDF generation failed (check LaTeX logs above).")
             raise HTTPException(status_code=500, detail="PDF generation failed")
