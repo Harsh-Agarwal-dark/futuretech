@@ -69,7 +69,22 @@ def get_gcs_credentials():
                     railway_vars = {k: v[:20] + "..." if len(v) > 20 else v for k, v in os.environ.items() if k.startswith("RAILWAY")}
                     print(f"🔍 Available RAILWAY_* variables: {list(railway_vars.keys())}")
                     
-                    if token_value:
+                    # Check if variable exists in environment
+                    if env_var_name in os.environ:
+                        actual_value = os.environ[env_var_name]
+                        print(f"🔍 Variable exists in os.environ")
+                        print(f"🔍 Value type: {type(actual_value)}")
+                        print(f"🔍 Value length: {len(actual_value) if actual_value else 0}")
+                        print(f"🔍 Value is empty string: {actual_value == ''}")
+                        print(f"🔍 Value is None: {actual_value is None}")
+                        if actual_value:
+                            print(f"🔍 Value preview: {actual_value[:50]}...")
+                        else:
+                            print(f"❌ Value is empty or None!")
+                    else:
+                        print(f"❌ Variable {env_var_name} NOT in os.environ")
+                    
+                    if token_value and len(token_value) > 0:
                         print(f"✅ Found OIDC token in environment variable: {env_var_name}")
                         print(f"🔍 Token preview: {token_value[:30]}..." if len(token_value) > 30 else f"🔍 Token: {token_value}")
                         
@@ -84,7 +99,7 @@ def get_gcs_credentials():
                         creds_info["credential_source"]["file"] = token_file.name
                         print(f"✅ Converted environment_variable to file: {token_file.name}")
                     else:
-                        print(f"❌ Environment variable {env_var_name} not found")
+                        print(f"❌ Environment variable {env_var_name} is empty or not set")
                         print(f"❌ This is a FATAL error - cannot proceed without OIDC token")
                         # Don't fall back to ADC on Railway - it will timeout
                         raise ValueError(f"CRITICAL: Environment variable {env_var_name} is required but not set. Railway OIDC token is missing!")
