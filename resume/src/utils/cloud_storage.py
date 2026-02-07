@@ -1,11 +1,9 @@
 import os
-import json
 import datetime
 import google.auth
 from google.auth.transport import requests
 from google.cloud import storage
 from google.api_core.exceptions import GoogleAPIError
-from google.oauth2 import service_account
 from supabase import create_client, Client
 
 # Configuration from environment variables
@@ -16,22 +14,10 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 def get_gcs_credentials():
     """
-    Load GCS credentials from environment variable or ADC.
-    Supports both GOOGLE_APPLICATION_CREDENTIALS_JSON (for Railway)
-    and standard ADC (for local development).
+    Load GCS credentials using Application Default Credentials (ADC).
+    Works with 'gcloud auth application-default login' locally
+    and with service account impersonation on Railway.
     """
-    # Try to load from JSON string in environment variable (Railway)
-    creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
-    if creds_json:
-        try:
-            creds_dict = json.loads(creds_json)
-            credentials = service_account.Credentials.from_service_account_info(creds_dict)
-            return credentials
-        except json.JSONDecodeError as e:
-            print(f"Error parsing GOOGLE_APPLICATION_CREDENTIALS_JSON: {e}")
-            raise
-    
-    # Fall back to ADC (for local development)
     credentials, _ = google.auth.default()
     return credentials
 
@@ -87,45 +73,38 @@ def sync_resume_gcs_path(user_id: str, resume_id: str, gcs_path: str):
 
 def get_signed_url(user_id: str, resume_id: str) -> str:
     """
-    Generates a V4 Signed URL using ADC and IAM Credential signing.
+    Generates a V4 Signed URL using Service Account Impersonation.
+    Works with ADC (gcloud auth application-default login) without requiring a JSON key file.
     """
     try:
-        # Get credentials from environment or ADC and refresh them
+        # Get credentials from environment or ADC
         credentials = get_gcs_credentials()
-        auth_request = requests.Request()
-        credentials.refresh(auth_request)
-
-        # Get service account email from credentials or environment
-        # User ADC (locally) lacks 'service_account_email', so we check env fallback
-        signer_email = getattr(credentials, 'service_account_email', None)
-        if not signer_email:
-            signer_email = os.getenv("GCS_SERVICE_ACCOUNT_EMAIL")
         
-        if not signer_email:
-            print("WARNING: 'service_account_email' not found in ADC.")
-            print("Locally, please set GCS_SERVICE_ACCOUNT_EMAIL in your .env (e.g., project-id@appspot.gserviceaccount.com)")
-            raise AttributeError("Missing service_account_email for signed URL generation.")
-
-        # Ensure the client is talking to the correct project
+        # Get service account email from environment
+        service_account_email = os.getenv("GCS_SERVICE_ACCOUNT_EMAIL")
+        if not service_account_email:
+            raise ValueError("GCS_SERVICE_ACCOUNT_EMAIL environment variable is required for signed URLs")
+        
+        # Initialize storage client
         client = storage.Client(project=PROJECT_ID, credentials=credentials)
         bucket = client.bucket(BUCKET_NAME)
         blob_path = f"resumes/{user_id}/{resume_id}.pdf"
         blob = bucket.blob(blob_path)
 
-        # Generate Signed URL (V4) using IAM/Token signing
-        # We add response_disposition to force the browser to download the file
+        # Generate Signed URL using IAM signBlob API (Service Account Impersonation)
+        # This works with ADC without needing a JSON key file
         url = blob.generate_signed_url(
             version="v4",
             expiration=datetime.timedelta(minutes=15),
             method="GET",
-            service_account_email=signer_email,
-            access_token=credentials.token,
+            service_account_email=service_account_email,
             response_disposition=f"attachment; filename=resume_{resume_id}.pdf"
         )
 
         return url
     except Exception as e:
-        print(f"Error generating signed URL with ADC: {e}")
-        if "IAM Credentials API" in str(e):
-            print("TIP: Enable the 'IAM Credentials API' in your Google Cloud Console.")
+        print(f"Error generating signed URL: {e}")
+        if "IAM Service Account Credentials API" in str(e):
+            print("TIP: Enable the 'IAM Service Account Credentials API' in your Google Cloud Console.")
+            print("Visit: https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com")
         raise e
