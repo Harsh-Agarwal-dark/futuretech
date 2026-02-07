@@ -1,9 +1,11 @@
 import os
+import json
 import datetime
 import google.auth
 from google.auth.transport import requests
 from google.cloud import storage
 from google.api_core.exceptions import GoogleAPIError
+from google.oauth2 import service_account
 from supabase import create_client, Client
 
 # Configuration from environment variables
@@ -12,19 +14,42 @@ PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT", "project-353fe44f-aa79-48fc-91d")
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
+def get_gcs_credentials():
+    """
+    Load GCS credentials from environment variable or ADC.
+    Supports both GOOGLE_APPLICATION_CREDENTIALS_JSON (for Railway)
+    and standard ADC (for local development).
+    """
+    # Try to load from JSON string in environment variable (Railway)
+    creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+    if creds_json:
+        try:
+            creds_dict = json.loads(creds_json)
+            credentials = service_account.Credentials.from_service_account_info(creds_dict)
+            return credentials
+        except json.JSONDecodeError as e:
+            print(f"Error parsing GOOGLE_APPLICATION_CREDENTIALS_JSON: {e}")
+            raise
+    
+    # Fall back to ADC (for local development)
+    credentials, _ = google.auth.default()
+    return credentials
+
 def get_supabase_client() -> Client:
     """Returns a Supabase client."""
     if not SUPABASE_URL or not SUPABASE_KEY:
         raise ValueError("SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables are not set.")
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
+
 def upload_resume_to_gcs(user_id: str, resume_id: str, pdf_content: bytes) -> str:
     """
     Uploads the PDF to GCS using Keyless Authentication (ADC).
     """
     try:
-        # Initialize client with the specific Quota Project
-        client = storage.Client(project=PROJECT_ID)
+        # Initialize client with credentials from environment or ADC
+        credentials = get_gcs_credentials()
+        client = storage.Client(project=PROJECT_ID, credentials=credentials)
         bucket = client.bucket(BUCKET_NAME)
         
         destination_blob_name = f"resumes/{user_id}/{resume_id}.pdf"
@@ -65,8 +90,8 @@ def get_signed_url(user_id: str, resume_id: str) -> str:
     Generates a V4 Signed URL using ADC and IAM Credential signing.
     """
     try:
-        # Get ADC credentials and refresh them
-        credentials, _ = google.auth.default()
+        # Get credentials from environment or ADC and refresh them
+        credentials = get_gcs_credentials()
         auth_request = requests.Request()
         credentials.refresh(auth_request)
 
