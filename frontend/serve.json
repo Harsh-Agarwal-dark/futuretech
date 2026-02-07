@@ -2,19 +2,12 @@
     "public": "dist",
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ],
-    "headers": [
-        {
             "source": "**/*.html",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ]
+            "destination": "/$1"
+        },
+        {
+            "source": "**",
+            "destination": "/index.html"
         }
     ]
 }
