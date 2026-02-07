@@ -25,10 +25,15 @@ export const generateResumePDF = async (resumeData) => {
         const { data: { session } } = await supabase.auth.getSession();
         if (!session) throw new Error('User not authenticated');
 
+        // Ensure we have a valid resume ID
+        if (!resumeData.id || resumeData.id === 'null') {
+            throw new Error('Resume must be saved before generating PDF. Please wait for auto-save to complete.');
+        }
+
         const payload = {
             resume: resumeData,
             user_id: session.user.id,
-            resume_id: resumeData.id || 'temp_resume'
+            resume_id: resumeData.id
         };
 
         const response = await fetch(`${API_URL}/generate`, {
