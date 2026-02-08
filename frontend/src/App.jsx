@@ -26,7 +26,8 @@ function App() {
     // Redirect root to landing.html
     if (window.location.pathname === '/') {
       window.location.href = '/landing.html'
-    }, [navigate])
+    }
+  }, [navigate])
   const showNavbar = location.pathname !== '/builder'
 
   return (
