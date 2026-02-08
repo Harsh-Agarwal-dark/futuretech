@@ -55,10 +55,7 @@ const Navbar = () => {
                                 <Link to="/profile" className="desktop-navbar-items track-class w-nav-link" onClick={closeMobileMenu}>Profile</Link>
                             </>
                         ) : (
-                            <Link to="/login" className="link-block-599 track-class w-inline-block" onClick={closeMobileMenu}>
-                                <div>Login</div>
-                                <div className="navhome-login-arrow"></div>
-                            </Link>
+                            <Link to="/login" className="desktop-navbar-items track-class w-nav-link" onClick={closeMobileMenu}>Login</Link>
                         )}
                     </nav>
                 </div>
