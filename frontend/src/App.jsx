@@ -26,13 +26,7 @@ function App() {
     // Redirect root to landing.html
     if (window.location.pathname === '/') {
       window.location.href = '/landing.html'
-    }
-
-    // Redirect /landing to /landing.html to serve the static file
-    if (window.location.pathname === '/landing') {
-      window.location.href = '/landing.html'
-    }
-  }, [navigate])
+    }, [navigate])
   const showNavbar = location.pathname !== '/builder'
 
   return (
