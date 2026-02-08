@@ -4,10 +4,10 @@
 
 **Start Command:**
 ```
-npx serve -s dist -l $PORT
+node server.js
 ```
 
-**Note:** The `-s` flag enables SPA mode for React Router while still serving static files like `landing.html`. The serve package uses "clean URLs" - accessing `/landing.html` will redirect to `/landing` but still serve the correct content.
+**Note:** We use a custom Express server instead of `serve` to avoid the "clean URLs" feature that redirects `/landing.html` to `/landing`. This allows both static files and React routes to work correctly.
 
 ### Environment Variables
 - `VITE_API_URL` - Backend URL (e.g., `https://your-backend.up.railway.app`)
