@@ -1454,8 +1454,13 @@
                                     msg.innerText = '';
 
                                     try {
-                                        // Use full backend URL to avoid Vite proxy issues
-                                        const response = await fetch('http://localhost:8000/api/leads', {
+                                        // Auto-detect backend URL based on environment
+                                        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                                        const backendUrl = isLocalhost
+                                            ? 'http://localhost:8000'
+                                            : 'https://resumebuilder-production.up.railway.app';
+
+                                        const response = await fetch(`${backendUrl}/api/leads`, {
                                             method: 'POST',
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(data)
