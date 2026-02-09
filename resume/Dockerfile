@@ -16,7 +16,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
+# Copy application code
 COPY . .
+# Explicitly copy config.py to ensure it's present (workaround for Railway build issue)
+COPY src/config.py /app/src/config.py
 
 # Expose port
 EXPOSE 8000
