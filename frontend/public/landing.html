@@ -64,7 +64,6 @@
         }
 
         .ft-footer-exact {
-            background-color: #101114;
             color: #f9fafb;
             padding-top: 24px;
             font-family: 'Inter', sans-serif;
@@ -621,6 +620,151 @@
         }
 
 
+        /* Force Light Theme Overrides */
+        body,
+        .body-14,
+        .section,
+        .wf-section {
+            background-color: #ffffff !important;
+            color: #1e293b !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            color: #1e293b;
+        }
+
+        html,
+        body {
+            overflow-x: hidden !important;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Production Style Restoration: Specific Sections */
+        /* 1. Notification Bar */
+        .div-block-1831980521448706 {
+            background-color: #0f172a !important;
+            padding: 10px !important;
+        }
+
+        .text-block-941288240474 {
+            color: #d9f99d !important;
+        }
+
+        .text-block-941288240473 {
+            color: #ffffff !important;
+        }
+
+        /* 2. Course Details Section (Desktop & Mobile) */
+        .div-block-183198052221 {
+            background-color: #0f172a !important;
+        }
+
+        .div-block-183198052209.desktop,
+        .div-block-183198052209 {
+            background-color: #0f172a !important;
+            border-radius: 8px !important;
+            /* Adding subtle rounding to match production cards if needed */
+        }
+
+        .text-block-94128920,
+        .text-block-9412882406 {
+            color: #94a3b8 !important;
+            /* Labels */
+        }
+
+        .text-block-94128921,
+        .text-block-9412882405,
+        .text-block-9412882481 {
+            color: #f1f5f9 !important;
+            /* Content */
+        }
+
+        .footer-link-dark {
+            color: #4b5563 !important;
+        }
+
+        /* Footer Dark Theme Restoration */
+        .ft-footer-exact {
+            background-color: #101114 !important;
+            color: #f9fafb !important;
+        }
+
+        .ft-footer-exact h4,
+        .ft-footer-exact p,
+        .ft-footer-exact span,
+        .ft-footer-exact div {
+            color: #f9fafb !important;
+        }
+
+        .ft-footer-exact a {
+            color: #d1d5db !important;
+        }
+
+        .ft-footer-exact a:hover {
+            color: #7C3AED !important;
+        }
+
+        .ft-social-link i {
+            color: #f9fafb !important;
+        }
+
+        .ft-huge-bg-text text {
+            fill: #1f2937 !important;
+            /* Update SVG text fill for dark background */
+        }
+
+        /* Exceptions for specific elements */
+        .form-button-new {
+            color: #ffffff !important;
+        }
+
+        .msg-success {
+            color: #10b981 !important;
+        }
+
+        .msg-error {
+            color: #ef4444 !important;
+        }
+
+        .desktop-navbar-items:hover {
+            color: #7741d8 !important;
+        }
+
+        /* Exception: Primary Buttons */
+        .book-a-free-demo-main-btn,
+        .w-button:not(.secondary-cta-btn):not(.highlight-btn) {
+            background-color: #7c3aed !important;
+            color: #ffffff !important;
+        }
+
+        .secondary-cta-btn,
+        .highlight-btn {
+            background-color: transparent !important;
+            color: #7c3aed !important;
+        }
+
+        /* Exception: Doubts Clarified Section Highlights */
+        .dc-td-info-h {
+            color: #f97316 !important;
+        }
+
+        .dc-td-info-info-2 {
+            color: #f8fafc !important;
+        }
+
+        /* Restoration of bright background for testimonials block */
+        .div-block-183198052156 {
+            background-color: transparent !important;
+        }
+
         .div-block-1747 {
             display: none !important;
         }
@@ -628,6 +772,162 @@
         /* Navbar hover effect */
         .desktop-navbar-items:hover {
             color: #7741d8 !important;
+        }
+
+        /* Navbar & Footer Responsive Fixes */
+        @media screen and (min-width: 992px) {
+            .nav-menu-home-3 {
+                display: flex !important;
+                align-items: center !important;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .nav-menu-home-3 {
+                display: none;
+                background-color: white !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                padding: 10px 0 !important;
+                border-bottom: 2px solid #7c3aed !important;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+                z-index: 999;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+
+            .nav-menu-home-3.w--open {
+                display: flex !important;
+            }
+
+            .desktop-navbar-items {
+                display: block !important;
+                padding: 18px 25px !important;
+                width: 100% !important;
+                text-align: left !important;
+                border-bottom: 1px solid #f1f5f9;
+                font-size: 16px !important;
+                color: #1e293b !important;
+                font-weight: 500 !important;
+                transition: background 0.2s ease;
+            }
+
+            .desktop-navbar-items:active,
+            .desktop-navbar-items:hover {
+                background-color: #f8fafc;
+                color: #7c3aed !important;
+            }
+
+            .menu-button-6 {
+                display: block !important;
+                padding: 10px !important;
+                cursor: pointer;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                -webkit-tap-highlight-color: transparent !important;
+            }
+
+            .menu-button-6.w--open {
+                background-color: rgba(0, 0, 0, 0.05) !important;
+            }
+        }
+
+        /* Footer Responsive */
+        .ft-footer-grid {
+            flex-direction: column !important;
+            gap: 40px !important;
+        }
+
+        .ft-footer-col,
+        .ft-footer-about {
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        .ft-social-links,
+        .ft-footer-list {
+            justify-content: center !important;
+        }
+
+        .ft-huge-bg-text svg {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .mb-hidden {
+            display: none !important;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 991px) {
+            .div-block-1831980521252 {
+                position: relative !important;
+                right: auto !important;
+                bottom: auto !important;
+                margin: 40px auto 0 !important;
+                left: auto !important;
+                transform: none !important;
+                width: 90% !important;
+                max-width: 500px !important;
+                padding: 24px !important;
+            }
+
+            .div-block-183198052144000 {
+                height: auto !important;
+                padding-bottom: 60px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+        }
+
+        @media screen and (max-width: 479px) {
+            .div-block-1831980521252 {
+                width: 95% !important;
+                padding: 20px 16px !important;
+                margin-top: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .intensive-new-logo img {
+                height: 40px !important;
+                width: auto !important;
+            }
+
+            .brand-9 {
+                padding-left: 10px !important;
+            }
+
+            .container-28 {
+                padding: 0 8px !important;
+            }
+
+            .icon-34,
+            .menu-button-6,
+            .menu-button-6 * {
+                color: #334155 !important;
+                -webkit-tap-highlight-color: transparent !important;
+            }
+
+            .nav-menu-home-3 {
+                background-color: white !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+            }
+
+            /* Smaller fonts for Course Details labels on ultra-small screens */
+            .text-block-94128920,
+            .text-block-9412882406 {
+                font-size: 11px !important;
+            }
+
+            .text-block-94128921,
+            .text-block-9412882405 {
+                font-size: 13px !important;
+            }
         }
     </style>
 </head>
@@ -754,8 +1054,7 @@
                     <div class="menu-button-6 w-nav-button">
                         <div class="icon-34 w-icon-nav-menu"></div>
                     </div>
-                    <nav role="navigation" class="nav-menu-home-3 w-nav-menu"
-                        style="display: flex; align-items: center;">
+                    <nav role="navigation" class="nav-menu-home-3 w-nav-menu">
                         <a href="#curriculum" id="curriculum-primary-navbar"
                             class="desktop-navbar-items track-class w-nav-link">Curriculum</a><a href="#job-support"
                             id="job-support-primary-navbar" class="desktop-navbar-items track-class w-nav-link">Job
@@ -10266,6 +10565,25 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
                     replaceBranding();
                 });
                 observer.observe(target, { childList: true, subtree: true });
+            }
+
+            // Mobile Navbar Toggle Script
+            const menuBtn = document.querySelector('.menu-button-6');
+            const navMenu = document.querySelector('.nav-menu-home-3');
+
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function (e) {
+                    navMenu.classList.toggle('w--open');
+                    menuBtn.classList.toggle('w--open');
+                });
+
+                // Close menu when clicking links
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('w--open');
+                        menuBtn.classList.remove('w--open');
+                    });
+                });
             }
         </script>
 </body>

@@ -16,19 +16,13 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-# Copy application code
 COPY . .
-# Explicitly copy config.py to ensure it's present (workaround for Railway build issue)
-COPY src/config.py /app/src/config.py
 
 # Expose port
 EXPOSE 8000
 
 # Set Python path to include the app directory
 ENV PYTHONPATH=/app
-
-# Verify src directory structure (for debugging)
-RUN ls -la /app && ls -la /app/src && test -f /app/src/config.py && echo "✓ src/config.py found"
 
 # Run the application
 CMD uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}
