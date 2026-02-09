@@ -20,5 +20,8 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
+# Set Python path to include the app directory
+ENV PYTHONPATH=/app
+
 # Run the application
 CMD uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}
