@@ -664,7 +664,7 @@
 
         html,
         body {
-            overflow-x: hidden !important;
+            overflow-x: visible !important;
             width: 100%;
             position: relative;
         }
@@ -949,6 +949,59 @@
             }
 
             .text-block-94128921,
+            .text-block-9412882405,
+            .text-block-9412882481 {
+                font-size: 13px !important;
+            }
+        }
+    </style>
+    <style>
+        /* Desktop Big Navbar Style (GoalStreet-like) */
+        @media screen and (min-width: 992px) {
+
+            /* Increase Navbar Height & Make Sticky */
+            .navbar-intensive,
+            .navbar-9 {
+                height: 100px !important;
+                /* Increased to 100px */
+                padding: 10px 0 !important;
+                background-color: white !important;
+                position: sticky !important;
+                /* Make it sticky */
+                top: 0 !important;
+                z-index: 9999 !important;
+                /* Ensure it stays on top */
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                /* Optional: nice for sticky nav */
+            }
+
+            /* Make Logo Bigger & Add Spacing */
+            .brand-9 {
+                padding-left: 0 !important;
+                height: 100% !important;
+                display: flex !important;
+                align-items: center !important;
+                margin-right: 80px !important;
+                /* Added margin to push links away */
+            }
+
+            .brand-9 img,
+            .intensive-new-logo img {
+                height: 100px !important;
+                /* Synced to 100px to match React */
+                width: auto !important;
+                max-height: none !important;
+            }
+
+            /* Vertically Center Links & Ensure Spacing */
+            .nav-menu-home-3 {
+                height: 100% !important;
+                align-items: center !important;
+                display: flex !important;
+                gap: 15px !important;
+                /* Spacing between individual links */
+            }
+        }
     </style>
 
 </head>
@@ -1070,7 +1123,7 @@
                 data-easing="ease" data-easing2="ease" role="banner" class="navbar-9 w-nav">
                 <div class="container-28 intensive-2-0 w-container"><a href="/landing.html" class="brand-9 w-nav-brand">
                         <div class="intensive-new-logo w-embed"><img src='/logo.png' alt=''
-                                style="height: 70px; width: auto;" /></div>
+                                style="height: 100px; width: auto;" /></div>
                     </a>
                     <div class="menu-button-6 w-nav-button">
                         <div class="icon-34 w-icon-nav-menu"></div>
@@ -7299,14 +7352,8 @@
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
                                                             <div class="html-embed-41908 w-embed">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                    height="40" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="#D4AF37" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                                    class="lucide lucide-code">
-                                                                    <polyline points="16 18 22 12 16 6" />
-                                                                    <polyline points="8 6 2 12 8 18" />
-                                                                </svg>
+                                                                <img src="assets/images/html.png" alt="html"
+                                                                    loading="lazy" width="100%">
                                                             </div>
                                                             <div class="text-block-94128905">HTML</div>
                                                         </div>
@@ -7315,16 +7362,8 @@
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
                                                             <div class="html-embed-41908 w-embed">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                    height="40" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="#0A3131" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                                    class="lucide lucide-file-code">
-                                                                    <path
-                                                                        d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                                                    <path
-                                                                        d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                                                                </svg>
+                                                                <img src="assets/images/css.png" alt="css"
+                                                                    loading="lazy" width="100%">
                                                             </div>
                                                             <div class="text-block-94128905">CSS</div>
                                                         </div>
@@ -7333,14 +7372,8 @@
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
                                                             <div class="html-embed-41908 w-embed">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                    height="40" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="#0A3131" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                                    class="lucide lucide-terminal">
-                                                                    <polyline points="4 17 10 11 4 5" />
-                                                                    <line x1="12" x2="20" y1="19" y2="19" />
-                                                                </svg>
+                                                                <img src="assets/images/python.png" alt="python"
+                                                                    loading="lazy" width="100%">
                                                             </div>
                                                             <div class="text-block-94128905">Python</div>
                                                         </div>
@@ -7349,15 +7382,8 @@
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
                                                             <div class="html-embed-41908 w-embed">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                    height="40" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="#D4AF37" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                                    class="lucide lucide-database">
-                                                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                                                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                                                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                                                                </svg>
+                                                                <img src="assets/images/sql.png" alt="sql"
+                                                                    loading="lazy" width="100%">
                                                             </div>
                                                             <div class="text-block-94128905">SQL</div>
                                                         </div>
@@ -7457,8 +7483,9 @@
                                                         </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
-                                                                :<br />In
-                                                                India</div>
+                                                                <br />In
+                                                                India
+                                                            </div>
                                                             <div><span class="text-block-94128819930">3 LPA - 12
                                                                     LPA</span>
                                                             </div>
@@ -7476,40 +7503,13 @@
                                                     </div>
                                                     <div class="div-block-1831980521447326"
                                                         style="display: flex; gap: 8px;">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-database">
-                                                            <ellipse cx="12" cy="5" rx="9" ry="3" />
-                                                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-server">
-                                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-                                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-                                                            <line x1="6" x2="6.01" y1="6" y2="6" />
-                                                            <line x1="6" x2="6.01" y1="18" y2="18" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-atom">
-                                                            <circle cx="12" cy="12" r="1" />
-                                                            <path
-                                                                d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.53-11.9-4.49-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.53 11.9 4.49z" />
-                                                            <path
-                                                                d="M15.7 15.7c4.52-4.54 6.53-9.87 4.49-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.53 9.87-4.49 11.9 2.03 2.04 7.36.02 11.9-4.5z" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-hexagon">
-                                                            <path
-                                                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                                        </svg>
+                                                        <img src="assets/images/mongodb.svg" loading="lazy"
+                                                            alt="MongoDB">
+                                                        <img src="assets/images/expressjs.svg" loading="lazy"
+                                                            alt="Expressjs">
+                                                        <img src="assets/images/reactjs.svg" loading="lazy"
+                                                            alt="Reactjs">
+                                                        <img src="assets/images/nodejs.svg" loading="lazy" alt="Nodejs">
                                                     </div><a id="view-curriculum-mern-full-stack" rel="nofollow"
                                                         view-curriculum="mern-fullstack-curriculum-intensive"
                                                         popup="true" href="#" target="_blank"
@@ -7554,8 +7554,9 @@
                                                         </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
-                                                                :<br />In
-                                                                India</div>
+                                                                <br />In
+                                                                India
+                                                            </div>
                                                             <div><span class="text-block-94128819930">3 LPA - 12
                                                                     LPA</span>
                                                             </div>
@@ -7573,35 +7574,11 @@
                                                     </div>
                                                     <div class="div-block-1831980521447326"
                                                         style="display: flex; gap: 8px;">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-atom">
-                                                            <circle cx="12" cy="12" r="1" />
-                                                            <path
-                                                                d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.53-11.9-4.49-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.53 11.9 4.49z" />
-                                                            <path
-                                                                d="M15.7 15.7c4.52-4.54 6.53-9.87 4.49-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.53 9.87-4.49 11.9 2.03 2.04 7.36.02 11.9-4.5z" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-coffee">
-                                                            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
-                                                            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
-                                                            <line x1="6" x2="6" y1="2" y2="4" />
-                                                            <line x1="10" x2="10" y1="2" y2="4" />
-                                                            <line x1="14" x2="14" y1="2" y2="4" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-leaf">
-                                                            <path
-                                                                d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                                                            <path
-                                                                d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                                                        </svg>
+                                                        <img src="assets/images/reactjs.svg" loading="lazy"
+                                                            alt="Reactjs">
+                                                        <img src="assets/images/java.svg" loading="lazy" alt="Java">
+                                                        <img src="assets/images/spring-boot.svg" loading="lazy"
+                                                            alt="Spring">
                                                     </div><a id="view-curriculum-java-full-stack" rel="nofollow"
                                                         view-curriculum="java-fullstack-curriculum" popup="true"
                                                         href="#" target="_blank"
@@ -7664,15 +7641,8 @@
                                                         <div class="text-block-94128819930">Real-time project</div>
                                                     </div>
                                                     <div style="margin-top: 10px;">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-flask-conical">
-                                                            <path
-                                                                d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
-                                                            <path d="M8.5 2h7" />
-                                                            <path d="M7 16h10" />
-                                                        </svg>
+                                                        <img src="assets/images/selenium.svg" loading="lazy"
+                                                            alt="Selnium">
                                                     </div><a id="view-curriculum-qa-testing-full-stack" rel="nofollow"
                                                         view-curriculum="qa-testing-curriculum-intensive" popup="true"
                                                         href="#" target="_blank"
@@ -7738,22 +7708,10 @@
                                                     </div>
                                                     <div class="div-block-1831980521447326"
                                                         style="display: flex; gap: 8px;">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-bar-chart-3">
-                                                            <path d="M3 3v18h18" />
-                                                            <path d="M18 17V9" />
-                                                            <path d="M13 17V5" />
-                                                            <path d="M8 17v-3" />
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" class="lucide lucide-pie-chart">
-                                                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
-                                                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
-                                                        </svg>
+                                                        <img src="assets/images/powerbi.svg" loading="lazy"
+                                                            alt="powerbi">
+                                                        <img src="assets/images/tableau.svg" loading="lazy"
+                                                            alt="tableau">
                                                     </div><a id="view-curriculum-data-analytics-full-stack"
                                                         rel="nofollow" view-curriculum="data-analytics" popup="true"
                                                         href="#" target="_blank"
@@ -9405,20 +9363,20 @@
                                                         <div class="div-block-1831980521411">
                                                             <div class="div-block-183198052008">
                                                                 <div class="w-embed"><img width="36px"
-                                                                        src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/java-fullstack.png">
+                                                                        src="assets/images/java.svg">
                                                                 </div>
                                                                 <div class="text-block-9412881928">Java Full Stack</div>
                                                             </div>
                                                             <div class="div-block-183198052008">
                                                                 <div class="w-embed"><img width="36px"
-                                                                        src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/mern-full-stack.svg">
+                                                                        src="assets/images/mongodb.svg">
                                                                 </div>
                                                                 <div class="text-block-9412881928">MERN Full Stack</div>
                                                             </div>
                                                             <div class="da-seats-container">
                                                                 <div class="div-block-183198052008">
                                                                     <div class="w-embed"><img
-                                                                            src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/data-analytics.svg"
+                                                                            src="assets/images/data-analytics.svg"
                                                                             width="36px" height="36px"></div>
                                                                     <div class="text-block-9412881928">Data Analytics
                                                                     </div>
@@ -9434,7 +9392,7 @@
                                                             <div class="da-seats-container">
                                                                 <div class="div-block-183198052008">
                                                                     <div class="w-embed"><img width="36px"
-                                                                            src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/automation-testing.svg">
+                                                                            src="assets/images/automation-testing.svg">
                                                                     </div>
                                                                     <div class="text-block-9412881928">QA / Automation
                                                                         Testing</div>
@@ -9730,7 +9688,7 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
                                                             }
                                                         </style>
                                                         <img class="money-image-styles"
-                                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/money-image.png">
+                                                            src="assets/images/money-image.avif">
                                                     </div>
                                                 </div>
                                             </div>
@@ -9854,8 +9812,7 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
                                                     }
                                                 }
                                             </style>
-                                            <img class="money-image-styles"
-                                                src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/money-image.png">
+                                            <img class="money-image-styles" src="assets/images/money-image.avif">
                                         </div>
                                     </div>
                                 </div>

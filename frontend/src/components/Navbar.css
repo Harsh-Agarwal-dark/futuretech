@@ -140,3 +140,50 @@
         height: 40px !important;
     }
 }
+
+/* Desktop Big Navbar Style */
+@media screen and (min-width: 992px) {
+    .navbar-intensive {
+        height: 120px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-9 {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    .container-28 {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 300px !important;
+        /* 300px gap for React app */
+    }
+
+    .brand-9 {
+        margin-right: 300px !important;
+        /* 300px margin for React app */
+    }
+
+    .brand-9 img {
+        height: 100px !important;
+    }
+
+    .nav-menu-home-3 {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        /* Individual link gap */
+    }
+
+    .desktop-navbar-items:hover {
+        color: #D4AF37 !important;
+        /* Golden hover color */
+    }
+}

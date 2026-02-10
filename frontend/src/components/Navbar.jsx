@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className="container-28 intensive-2-0 w-container">
                     <a href="/landing.html" className="brand-9 w-nav-brand">
                         <div className="intensive-new-logo">
-                            <img src='/logo.png' alt='FutureTech' style={{ height: '70px', width: 'auto' }} />
+                            <img src='/logo.png' alt='FutureTech' style={{ height: '100px', width: 'auto' }} />
                         </div>
                     </a>
                     <div className="menu-button-6 w-nav-button" onClick={toggleMobileMenu}>
