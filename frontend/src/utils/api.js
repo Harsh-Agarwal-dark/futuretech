@@ -153,3 +153,14 @@ export const deleteResume = async (id) => {
     }
     return { success: true };
 };
+
+export const listLeads = async () => {
+    try {
+        const response = await fetch(`${API_URL}/api/leads`);
+        if (!response.ok) throw new Error('Failed to fetch leads');
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching leads:', error);
+        throw error;
+    }
+};

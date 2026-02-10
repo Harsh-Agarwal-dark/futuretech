@@ -296,6 +296,20 @@ async def capture_lead(lead: LeadCapture, background_tasks: BackgroundTasks):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/api/leads")
+async def list_leads():
+    """
+    Fetches all leads from Supabase.
+    """
+    try:
+        supabase = get_supabase_client()
+        response = supabase.table("leads").select("*").order("created_at", desc=True).execute()
+        return response.data
+    except Exception as e:
+        print(f"❌ Error fetching leads: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # ... (Previous code)
 
 # --- User Profile Endpoints ---

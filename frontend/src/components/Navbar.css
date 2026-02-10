@@ -188,4 +188,19 @@
         color: #D4AF37 !important;
         /* Golden hover color */
     }
+
+    /* Admin Overrides */
+    .admin-nav-container {
+        justify-content: flex-start !important;
+        gap: 0 !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .admin-nav-brand {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
 }
