@@ -99,7 +99,7 @@ const ResumePreview = ({ data }) => {
                         <div key={idx} className="resume-item">
                             <div className="item-header">
                                 <strong>{proj.name || 'Project Title'}</strong>
-                                {proj.link && <span style={{ fontSize: '9px', color: '#2563eb' }}>Link</span>}
+                                {proj.link && <span style={{ fontSize: '9px', color: '#0A3131' }}>Link</span>}
                             </div>
                             <div className="item-subheader">
                                 {Array.isArray(proj.technologies) ? proj.technologies.join(', ') : proj.technologies}

@@ -138,8 +138,8 @@
         }
 
         .ft-social-link:hover {
-            color: #7C3AED;
-            /* Purple accent */
+            color: #FFD700;
+            /* Bright Gold highlight */
         }
 
         .ft-footer-col h4 {
@@ -173,7 +173,7 @@
         }
 
         .ft-footer-list a:hover {
-            color: #ffffff;
+            color: #FFD700;
         }
 
         .ft-huge-bg-text {
@@ -291,11 +291,11 @@
 
     <style>
         .pagination_page-button.w--current {
-            color: #1D4ED8 !important;
-            border: 1px solid #1D4ED8 !important;
+            color: #0A3131 !important;
+            border: 1px solid #0A3131 !important;
             padding: 8px, 16px;
             margin: 0px;
-            background-color: #EFF6FF !important;
+            background-color: #F0F9F9 !important;
         }
 
         #successCard {
@@ -487,12 +487,12 @@
         .form-title-main {
             font-size: 24px;
             font-weight: 700;
-            color: #1e293b;
+            color: #0A3131;
             line-height: 1.25;
         }
 
         .text-purple-underline {
-            color: #7c3aed;
+            color: #0A3131;
             text-decoration: underline;
         }
 
@@ -510,7 +510,7 @@
             display: block;
             font-size: 13px;
             font-weight: 600;
-            color: #64748b;
+            color: #0A3131;
             margin-bottom: 8px;
         }
 
@@ -521,7 +521,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 6px;
             font-size: 14px;
-            color: #1e293b;
+            color: #0A3131;
             background: #ffffff;
             outline: none;
             transition: border-color 0.2s;
@@ -529,7 +529,7 @@
 
         .form-input-new:focus,
         .form-select-new:focus {
-            border-color: #7c3aed;
+            border-color: #0A3131;
         }
 
         .form-input-new::placeholder {
@@ -544,7 +544,7 @@
         }
 
         .custom-phone-wrapper:focus-within {
-            border-color: #7c3aed;
+            border-color: #0A3131;
         }
 
         .custom-country-code {
@@ -553,7 +553,7 @@
             padding: 0 12px;
             background: #f8fafc;
             font-size: 13px;
-            color: #64748b;
+            color: #0A3131;
             border-right: 1px solid #e2e8f0;
             white-space: nowrap;
         }
@@ -576,7 +576,7 @@
 
         .form-agreement-text {
             font-size: 12px;
-            color: #64748b;
+            color: #0A3131;
             margin: 20px 0;
             line-height: 1.5;
         }
@@ -587,10 +587,31 @@
             font-weight: 600;
         }
 
+        /* User requested color change for this block */
+        .text-block-9412882261 {
+            background-color: #0A3131 !important;
+            border: 2px solid #0A3131 !important;
+            /* Boundary color */
+            color: #ffffff !important;
+            /* Ensure text is readable */
+        }
+
+        /* Change violet underline image to golden color - FIXED SELECTOR */
+        .frame-1000004064 .vectors-wrapper-163 img {
+            filter: brightness(1.2) sepia(1) saturate(15) hue-rotate(20deg) contrast(1.1) !important;
+        }
+
+        /* NUCLEAR OPTION: Force SVG Icon Colors to Gold */
+        .html-embed-82606 svg path,
+        .html-embed-82606 svg circle {
+            stroke: #F59E0B !important;
+            filter: none !important;
+        }
+
         .form-button-new {
             width: 100%;
             padding: 14px;
-            background: #7c3aed;
+            background: #0A3131;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -601,7 +622,8 @@
         }
 
         .form-button-new:hover {
-            background: #6d28d9;
+            background: #0A3131;
+            box-shadow: 0 0 15px #FFD700;
         }
 
         .form-message {
@@ -626,7 +648,7 @@
         .section,
         .wf-section {
             background-color: #ffffff !important;
-            color: #1e293b !important;
+            color: #0A3131 !important;
         }
 
         h1,
@@ -637,7 +659,7 @@
         h6,
         p,
         span {
-            color: #1e293b;
+            color: #0A3131;
         }
 
         html,
@@ -650,7 +672,7 @@
         /* Production Style Restoration: Specific Sections */
         /* 1. Notification Bar */
         .div-block-1831980521448706 {
-            background-color: #0f172a !important;
+            background-color: #0A3131 !important;
             padding: 10px !important;
         }
 
@@ -664,12 +686,12 @@
 
         /* 2. Course Details Section (Desktop & Mobile) */
         .div-block-183198052221 {
-            background-color: #0f172a !important;
+            background-color: #0A3131 !important;
         }
 
         .div-block-183198052209.desktop,
         .div-block-183198052209 {
-            background-color: #0f172a !important;
+            background-color: #0A3131 !important;
             border-radius: 8px !important;
             /* Adding subtle rounding to match production cards if needed */
         }
@@ -693,7 +715,7 @@
 
         /* Footer Dark Theme Restoration */
         .ft-footer-exact {
-            background-color: #101114 !important;
+            background-color: #051919 !important;
             color: #f9fafb !important;
         }
 
@@ -709,7 +731,7 @@
         }
 
         .ft-footer-exact a:hover {
-            color: #7C3AED !important;
+            color: #FFD700 !important;
         }
 
         .ft-social-link i {
@@ -735,25 +757,25 @@
         }
 
         .desktop-navbar-items:hover {
-            color: #7741d8 !important;
+            color: #D4AF37 !important;
         }
 
         /* Exception: Primary Buttons */
         .book-a-free-demo-main-btn,
         .w-button:not(.secondary-cta-btn):not(.highlight-btn) {
-            background-color: #7c3aed !important;
+            background-color: #0A3131 !important;
             color: #ffffff !important;
         }
 
         .secondary-cta-btn,
         .highlight-btn {
             background-color: transparent !important;
-            color: #7c3aed !important;
+            color: #0A3131 !important;
         }
 
         /* Exception: Doubts Clarified Section Highlights */
         .dc-td-info-h {
-            color: #f97316 !important;
+            color: #D4AF37 !important;
         }
 
         .dc-td-info-info-2 {
@@ -771,7 +793,7 @@
 
         /* Navbar hover effect */
         .desktop-navbar-items:hover {
-            color: #7741d8 !important;
+            color: #D4AF37 !important;
         }
 
         /* Navbar & Footer Responsive Fixes */
@@ -792,7 +814,7 @@
                 right: 0;
                 flex-direction: column;
                 padding: 10px 0 !important;
-                border-bottom: 2px solid #7c3aed !important;
+                border-bottom: 2px solid #0A3131 !important;
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
                 z-index: 999;
                 max-height: calc(100vh - 80px);
@@ -810,7 +832,7 @@
                 text-align: left !important;
                 border-bottom: 1px solid #f1f5f9;
                 font-size: 16px !important;
-                color: #1e293b !important;
+                color: #0A3131 !important;
                 font-weight: 500 !important;
                 transition: background 0.2s ease;
             }
@@ -818,7 +840,7 @@
             .desktop-navbar-items:active,
             .desktop-navbar-items:hover {
                 background-color: #f8fafc;
-                color: #7c3aed !important;
+                color: #D4AF37 !important;
             }
 
             .menu-button-6 {
@@ -927,11 +949,8 @@
             }
 
             .text-block-94128921,
-            .text-block-9412882405 {
-                font-size: 13px !important;
-            }
-        }
     </style>
+
 </head>
 
 <body>
@@ -939,29 +958,29 @@
         <style>
             .navhome-login-arrow {
                 clip-path: path("M5 13H16.865L13.232 17.36C12.878 17.784 12.936 18.415 13.36 18.768C13.785 19.122 14.415 19.064 14.769 18.64L19.769 12.64C19.808 12.593 19.827 12.538 19.856 12.486C19.88 12.444 19.909 12.408 19.927 12.362C19.972 12.247 19.999 12.126 19.999 12.004C19.999 12.003 20 12.001 20 12C20 11.999 19.999 11.997 19.999 11.996C19.999 11.874 19.972 11.753 19.927 11.638C19.909 11.592 19.88 11.556 19.856 11.514C19.827 11.462 19.808 11.407 19.769 11.36L14.769 5.36C14.57 5.123 14.286 5 14 5C13.774 5 13.547 5.076 13.36 5.232C12.936 5.585 12.878 6.216 13.232 6.64L16.865 11H5C4.448 11 4 11.448 4 12C4 12.552 4.448 13 5 13Z");
-                background-color: rgb(119, 65, 216);
+                background-color: #0A3131;
             }
 
             .script-container-underlne {
                 clip-path: path("M47.2602 1.64763C46.1596 1.49108 45.0581 1.3694 43.9571 1.23222C43.5939 1.18528 43.2279 1.17702 42.8642 1.14945C42.0747 1.08903 41.2852 1.03247 40.4957 0.972053C40.0566 0.938906 39.6158 0.901848 39.1767 0.872573C39.0485 0.865808 38.9222 0.859078 38.7939 0.856185C38.5072 0.849718 38.2202 0.851007 37.9334 0.848413C36.6298 0.819016 35.3242 0.797304 34.0206 0.767907C33.7094 0.760887 33.3996 0.769422 33.0882 0.770147C32.3181 0.772151 31.5497 0.77806 30.7815 0.780106C29.9132 0.783771 29.0471 0.771993 28.1783 0.798891C26.7731 0.836941 25.3698 0.878901 23.9647 0.916951C23.1506 0.94121 22.3389 0.946161 21.5243 0.993655C20.1219 1.07826 18.7215 1.15901 17.3192 1.23974C16.5538 1.28447 15.7867 1.31754 15.0207 1.38938C13.57 1.52326 12.1194 1.65328 10.6687 1.78716C9.89319 1.85878 9.11824 1.90716 8.34361 2.0253C6.89665 2.24449 5.45157 2.46372 4.00461 2.68292C3.69212 2.73011 3.37962 2.77732 3.06713 2.82451C2.44214 2.9189 1.81952 3.07532 1.19563 3.2046C1.15576 3.21532 1.11776 3.22609 1.07797 3.23294C1.00344 3.27388 0.935665 3.34983 0.878424 3.46089C0.793549 3.62557 0.741147 3.85686 0.73582 4.09307C0.730493 4.32928 0.772416 4.5627 0.849693 4.73491C0.91986 4.88759 1.045 5.02988 1.15503 5.00524C1.9079 4.84788 2.65906 4.68272 3.41285 4.56799C4.11168 4.46365 4.8087 4.35539 5.50753 4.25105C6.26887 4.13649 7.03021 4.02192 7.79155 3.90737C8.09839 3.86005 8.40557 3.79725 8.71386 3.76933C9.89975 3.66047 11.0856 3.55548 12.2714 3.45049C13.0109 3.38193 13.7504 3.31726 14.4899 3.24871C14.7944 3.2207 15.101 3.18499 15.4072 3.16478C16.5809 3.09439 17.7563 3.0318 18.9298 2.96916C19.6423 2.93098 20.3529 2.88887 21.0653 2.8507C21.3054 2.83674 21.5436 2.81889 21.7834 2.81267C23.0507 2.77926 24.3178 2.74971 25.585 2.72018C26.2932 2.70128 26.9994 2.68621 27.7077 2.66731C27.9588 2.66135 28.2121 2.6477 28.4631 2.64949C29.7691 2.65182 31.0752 2.65415 32.3813 2.65648C33.1967 2.6555 34.0101 2.65834 34.825 2.68059C36.2114 2.7196 37.5979 2.75474 38.9824 2.79371C39.2559 2.79988 39.5289 2.8293 39.802 2.85483C40.5669 2.91857 41.3299 2.98227 42.0948 3.04601C42.6675 3.09379 43.2402 3.14158 43.8148 3.18941C44.2217 3.22183 44.6259 3.29292 45.0324 3.34858C46.2273 3.50726 47.4221 3.67369 48.6148 3.85168C48.9176 3.89725 49.2203 3.95056 49.523 4.00387C49.8483 4.0577 50.1735 4.1154 50.4963 4.1963C50.5469 4.21293 50.5955 4.23341 50.6459 4.25779C50.773 4.3149 50.896 4.30218 51.0141 4.16924C51.1226 4.04383 51.2067 3.83264 51.2461 3.58945C51.3256 3.07983 51.187 2.53043 50.9412 2.38154C50.7251 2.25269 50.4999 2.19724 50.2764 2.14571C50.1225 2.11125 49.9704 2.07295 49.8164 2.03848C49.5217 1.96984 49.2243 1.93213 48.9292 1.87898C48.3746 1.78124 47.8173 1.71832 47.2604 1.6399L47.2602 1.64763Z");
-                background-color: rgb(139, 92, 246);
+                background-color: #D4AF37;
 
             }
 
             .fullstack-developer-underline {
                 clip-path: path("M413.893 1.79794C404.081 1.54403 394.269 1.35291 384.457 1.13387C381.22 1.05859 377.966 1.05298 374.729 1.01256C367.701 0.923792 360.673 0.841993 353.646 0.753226C349.737 0.70468 345.813 0.649138 341.905 0.607564C340.764 0.598632 339.64 0.589716 338.5 0.587757C335.95 0.583376 333.401 0.592961 330.851 0.595552C319.261 0.57564 307.654 0.569613 296.064 0.549701C293.296 0.544946 290.545 0.568149 287.778 0.577338C280.934 0.60044 274.108 0.630525 267.281 0.653656C259.565 0.682232 251.866 0.682958 244.151 0.753365C231.671 0.857421 219.209 0.968469 206.729 1.07252C199.5 1.1368 192.287 1.16626 185.058 1.27236C172.612 1.46014 160.183 1.64093 147.737 1.82174C140.943 1.92162 134.133 2.00057 127.34 2.14925C114.475 2.42694 101.609 2.69768 88.7436 2.97538C81.8664 3.12392 74.9892 3.23063 68.1286 3.46286C55.3132 3.89402 42.5146 4.32518 29.6992 4.75634C26.9314 4.84919 24.1637 4.94208 21.396 5.03493C15.8605 5.22063 10.3584 5.51793 4.83965 5.76641C4.48738 5.78672 4.15189 5.80707 3.79963 5.82041C3.14535 5.89598 2.55804 6.03439 2.07128 6.23574C1.34952 6.5343 0.929476 6.95191 0.928745 7.3772C0.928015 7.80249 1.34662 8.22154 2.06734 8.52955C2.72102 8.80258 3.86116 9.05553 4.83408 9.00839C11.4935 8.7061 18.1362 8.38982 24.8123 8.16424C31.002 7.95874 37.1748 7.74624 43.3645 7.54074C50.1077 7.31528 56.8509 7.08981 63.594 6.86434C66.3115 6.7714 69.0289 6.65059 71.763 6.59254C82.2802 6.36659 92.7973 6.14759 103.314 5.92861C109.873 5.7865 116.431 5.65138 122.99 5.50926C125.691 5.45116 128.408 5.37912 131.125 5.33498C141.542 5.17858 151.975 5.03618 162.391 4.89372C168.715 4.80697 175.022 4.71319 181.345 4.62645C183.475 4.59525 185.589 4.55708 187.719 4.53982C198.974 4.44761 210.229 4.36235 221.484 4.2771C227.774 4.22516 234.047 4.18016 240.337 4.12822C242.568 4.11113 244.816 4.08016 247.047 4.07702C258.654 4.04816 270.261 4.01928 281.868 3.99042C289.114 3.96801 296.343 3.95253 303.589 3.97195C315.917 4.00707 328.245 4.03522 340.557 4.07031C342.989 4.07449 345.421 4.12053 347.853 4.15957C354.663 4.25493 361.456 4.35026 368.265 4.44562C373.364 4.51713 378.463 4.58865 383.579 4.66019C387.202 4.70825 390.808 4.82597 394.431 4.91586C405.081 5.1712 415.732 5.44051 426.365 5.73069C429.066 5.80505 431.766 5.89333 434.466 5.98163C437.368 6.07028 440.269 6.1659 443.154 6.30333C443.607 6.33199 444.043 6.36762 444.496 6.41023C445.636 6.5098 446.727 6.48378 447.75 6.24152C448.69 6.01306 449.395 5.6308 449.698 5.19209C450.303 4.27282 448.963 3.28749 446.749 3.02572C444.804 2.79927 442.791 2.70517 440.796 2.61808C439.42 2.55994 438.062 2.49486 436.686 2.43672C434.053 2.32065 431.403 2.26028 428.77 2.1721C423.822 2.01021 418.857 1.91108 413.893 1.78402L413.893 1.79794Z");
-                background-color: rgb(139, 92, 246);
+                background-color: #D4AF37;
 
             }
 
             .your-triners-underline {
                 clip-path: path("M156.615 1.2969C152.894 1.06504 149.173 0.892904 145.452 0.694201C144.225 0.625778 142.991 0.623642 141.763 0.588376C139.098 0.510852 136.433 0.439955 133.768 0.362431C132.286 0.320096 130.798 0.271124 129.316 0.235421C128.884 0.228047 128.457 0.22067 128.025 0.219927C127.058 0.218266 126.091 0.229887 125.124 0.234857C120.729 0.227306 116.327 0.232979 111.932 0.225428C110.883 0.223625 109.84 0.248397 108.79 0.259857C106.195 0.288555 103.606 0.323877 101.017 0.352587C98.091 0.387348 95.1714 0.395603 92.2454 0.470152C87.5128 0.581387 82.7866 0.699255 78.054 0.81049C75.3124 0.878725 72.5772 0.913832 69.8356 1.02186C65.1156 1.21269 60.402 1.39686 55.682 1.58106C53.1057 1.68274 50.5231 1.76452 47.9468 1.91262C43.0676 2.18939 38.1885 2.45954 33.3093 2.73631C30.7012 2.88435 28.0931 2.9926 25.4912 3.22023C20.6308 3.64292 15.7769 4.06559 10.9166 4.48828C9.86688 4.57932 8.81721 4.67038 7.76753 4.76142C5.66818 4.94349 3.58137 5.23167 1.48827 5.47343C1.35466 5.4931 1.22741 5.51278 1.09382 5.52582C0.845623 5.59833 0.622769 5.73056 0.437978 5.92256C0.163978 6.20724 0.00427749 6.60485 0.00358251 7.00937C0.00288753 7.41388 0.161221 7.81205 0.43423 8.1043C0.681853 8.36335 1.11397 8.60282 1.48297 8.55704C4.00869 8.26296 6.52806 7.95561 9.06001 7.73449C11.4075 7.53295 13.7486 7.32477 16.096 7.12323C18.6534 6.90215 21.2108 6.68107 23.7682 6.45999C24.7988 6.36892 25.8294 6.25135 26.8663 6.19345C30.8549 5.9682 34.8435 5.74957 38.832 5.53095C41.3193 5.38933 43.8066 5.25437 46.2939 5.11275C47.318 5.05483 48.3486 4.98364 49.3791 4.939C53.3294 4.78 57.286 4.6343 61.2363 4.48856C63.6344 4.39984 66.0262 4.30445 68.4244 4.21573C69.2322 4.18396 70.0338 4.14558 70.8416 4.12707C75.1098 4.0283 79.378 3.93615 83.6462 3.84401C86.0316 3.78843 88.4106 3.73946 90.796 3.68387C91.642 3.66543 92.4944 3.63376 93.3403 3.62858C97.742 3.58973 102.144 3.55085 106.545 3.512C109.293 3.48356 112.035 3.46173 114.783 3.47309C119.458 3.49438 124.133 3.50904 128.802 3.53032C129.724 3.53191 130.646 3.57331 131.568 3.60805C134.151 3.69206 136.727 3.77606 139.309 3.86007C141.242 3.92307 143.176 3.98609 145.116 4.04911C146.49 4.09126 147.857 4.19968 149.231 4.28162C153.27 4.51403 157.308 4.75971 161.34 5.02527C162.364 5.09334 163.388 5.17465 164.412 5.25599C165.513 5.33746 166.613 5.42556 167.707 5.55343C167.878 5.58025 168.044 5.61371 168.215 5.65379C168.648 5.74738 169.061 5.72156 169.45 5.49013C169.806 5.2719 170.074 4.90763 170.189 4.49005C170.42 3.6151 169.912 2.67922 169.073 2.43242C168.336 2.21895 167.573 2.13142 166.816 2.05055C166.294 1.9966 165.779 1.93603 165.258 1.88208C164.259 1.77427 163.254 1.71946 162.256 1.63817C160.38 1.48905 158.497 1.39964 156.615 1.28367L156.615 1.2969Z");
-                background-color: rgb(139, 92, 246);
+                background-color: #D4AF37;
             }
 
             .view-curriculum-arrow {
                 clip-path: path("M9.74998 6.71063C9.32748 7.10063 9.32748 7.73063 9.74998 8.12063L13.9533 12.0006L9.74998 15.8806C9.32748 16.2706 9.32748 16.9006 9.74998 17.2906C10.1725 17.6806 10.855 17.6806 11.2775 17.2906L16.25 12.7006C16.6725 12.3106 16.6725 11.6806 16.25 11.2906L11.2775 6.70063C10.8658 6.32063 10.1725 6.32063 9.74998 6.71063Z");
-                background-color: rgb(119, 65, 216);
+                background-color: #0A3131;
             }
 
             .faq-dropdown-arrow {
@@ -975,12 +994,12 @@
         <style>
             .your-seniours-got-placed-underline {
                 clip-path: path("M205.026 1.43287C200.155 1.18745 195.284 1.00483 190.413 0.794269C188.806 0.721788 187.191 0.718995 185.584 0.681374C182.095 0.598688 178.606 0.522969 175.117 0.440283C173.177 0.395117 171.228 0.342971 169.288 0.304778C168.722 0.296833 168.164 0.288889 167.598 0.287916C166.332 0.285741 165.067 0.297531 163.801 0.302329C158.047 0.292443 152.284 0.296458 146.53 0.286572C145.156 0.284212 143.791 0.309794 142.417 0.321377C139.019 0.3504 135.63 0.386391 132.241 0.415428C128.41 0.450679 124.588 0.458065 120.758 0.535148C114.562 0.649999 108.375 0.771829 102.179 0.88668C98.5902 0.957206 95.0094 0.992905 91.4203 1.10526C85.2412 1.30381 79.0705 1.49535 72.8915 1.68693C69.5188 1.79268 66.1379 1.87752 62.7651 2.03209C56.3778 2.32091 49.9904 2.60278 43.603 2.8916C40.1886 3.04609 36.7743 3.15875 33.3681 3.39692C27.0055 3.83916 20.6511 4.28139 14.2885 4.72364C12.9143 4.81889 11.5402 4.91417 10.1661 5.00941C7.41781 5.19991 4.686 5.50196 1.94595 5.75521C1.77105 5.77583 1.60447 5.79647 1.42958 5.81012C1.10469 5.88625 0.813001 6.02517 0.571168 6.22694C0.212589 6.52612 0.00369466 6.94409 0.00296398 7.36939C0.00223331 7.79468 0.20969 8.21337 0.567227 8.52075C0.891516 8.79322 1.45733 9.04518 1.94038 8.9972C5.24677 8.68914 8.54485 8.36712 11.8594 8.13576C14.9325 7.92491 17.9972 7.70707 21.0703 7.49622C24.4182 7.26492 27.7661 7.03361 31.114 6.80232C32.4631 6.70703 33.8123 6.58387 35.1697 6.52345C40.3912 6.2884 45.6127 6.06031 50.8342 5.83223C54.0904 5.68444 57.3465 5.54365 60.6026 5.39586C61.9434 5.33541 63.2925 5.26102 64.6416 5.21454C69.813 5.04912 74.9927 4.89769 80.1641 4.74622C83.3036 4.65401 86.4347 4.55477 89.5742 4.46256C90.6318 4.42951 91.6811 4.38952 92.7387 4.37042C98.3263 4.26847 103.914 4.17347 109.502 4.07849C112.624 4.02111 115.739 3.97068 118.862 3.91329C119.969 3.89428 121.085 3.86136 122.192 3.85629C127.955 3.81739 133.717 3.77847 139.48 3.73956C143.077 3.71088 146.666 3.68915 150.263 3.7023C156.384 3.72676 162.504 3.74424 168.616 3.76869C169.824 3.77076 171.031 3.8147 172.238 3.85163C175.619 3.94111 178.991 4.03055 182.372 4.12002C184.903 4.18712 187.435 4.25423 189.974 4.32134C191.773 4.36627 193.563 4.48087 195.361 4.56762C200.649 4.81375 205.936 5.07385 211.215 5.35483C212.555 5.42685 213.896 5.51279 215.236 5.59876C216.677 5.6849 218.117 5.77801 219.549 5.91294C219.774 5.94121 219.991 5.97646 220.215 6.01868C220.781 6.11726 221.323 6.0903 221.831 5.84716C222.298 5.61788 222.648 5.23502 222.799 4.79604C223.1 3.87625 222.436 2.89208 221.337 2.63223C220.371 2.40746 219.372 2.31511 218.382 2.22974C217.699 2.17279 217.024 2.10888 216.342 2.05194C215.035 1.93814 213.719 1.88007 212.412 1.79416C209.956 1.63656 207.491 1.54171 205.026 1.41896L205.026 1.43287Z");
-                background-color: rgb(139, 92, 246);
+                background-color: #D4AF37;
 
             }
 
             .blue-down-arrow {
-                background-color: #1565D8;
+                background-color: #0A3131;
                 width: 18px;
                 height: 28px;
                 clip-path: path("M-0.0012328 14.9899L8.84345 28L18 15.2097L10.1353 20.9025L10.1353 -3.43776e-07L7.80551 -4.45615e-07L7.80551 20.8827L-0.0012328 14.9899Z");
@@ -989,7 +1008,7 @@
             .your-seniors-got-placed-right-arrow,
             .your-seniors-got-placed-left-arrow {
                 clip-path: path("M9.74998 6.71063C9.32748 7.10063 9.32748 7.73063 9.74998 8.12063L13.9533 12.0006L9.74998 15.8806C9.32748 16.2706 9.32748 16.9006 9.74998 17.2906C10.1725 17.6806 10.855 17.6806 11.2775 17.2906L16.25 12.7006C16.6725 12.3106 16.6725 11.6806 16.25 11.2906L11.2775 6.70063C10.8658 6.32063 10.1725 6.32063 9.74998 6.71063Z");
-                background-color: #475569;
+                background-color: #0A3131;
             }
 
             .your-seniors-got-placed-left-arrow {
@@ -1036,7 +1055,7 @@
 
             .desktop-navbar-items {
                 padding: 10px 20px !important;
-                color: #475569 !important;
+                color: #0A3131 !important;
                 font-size: 15px !important;
                 font-weight: 500 !important;
             }
@@ -1122,7 +1141,7 @@
                                             <div class="text-block-9412881915">Full Stack Developer</div>
                                         </div>
                                     </div>
-                                    <div class="fullstack-developer-underline"></div>
+                                    /*<!-- <div class="fullstack-developer-underline"></div> -->*/
                                 </div>
                                 <div class="intensive-description-div">
                                     <div class="div-block-183198052209">
@@ -1209,8 +1228,7 @@
                                                             <div>Companies Hired Our Students</div>
                                                         </div>
                                                         <div class="hs-testimonials-card-companies-image w-embed"><img
-                                                                src='https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/companies-image-hero-section.png'
-                                                                alt='' /></div>
+                                                                src='assets/images/carousel2.png' alt='' /></div>
                                                     </div>
                                                 </div>
                                                 <div class="hs-testimonials-slide w-slide">
@@ -1236,8 +1254,8 @@
                                                             </div>
                                                             <div class="hs-testimonials-company-logo">
                                                                 <div class="w-embed"><img
-                                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/asecent-academy-company.png'
-                                                                        alt='' width="100px" loading='lazy' /></div>
+                                                                        src='assets/images/carousel2.png' alt=''
+                                                                        width="100px" loading='lazy' /></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1245,8 +1263,7 @@
                                                 <div class="hs-testimonials-slide w-slide">
                                                     <div class="hs-testimonials-slide-card3">
                                                         <div class="hs-testimonials-doubts-image-div">
-                                                            <div class="w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/doubts-clarifiication-image.png'
+                                                            <div class="w-embed"><img src='assets/images/carousel1.png'
                                                                     alt='' width="100%" loading='lazy' /></div>
                                                         </div>
                                                         <div class="hs-testimonials-doubts-content-div-2">
@@ -1289,8 +1306,7 @@
                                                 <div class="hs-testimonials-slide w-slide">
                                                     <div class="hs-testimonials-slide-card3">
                                                         <div class="hs-testimonials-doubts-image-div _2nd-image">
-                                                            <div class="w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/online-labs-24-7.png'
+                                                            <div class="w-embed"><img src='assets/images/carousel3.png'
                                                                     alt='' loading='lazy' /></div>
                                                         </div>
                                                         <div class="hs-testimonials-doubts-content-div-2">
@@ -1381,8 +1397,7 @@
                                     Book a Live Demo<br>
                                     For <span class="text-purple-underline">Free</span> !
                                 </div>
-                                <img src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/demo-embed-form-person-image.png"
-                                    alt="" class="form-person-img-new">
+                                <img src="assets/images/book.png" alt="" class="form-person-img-new">
                             </div>
                             <form id="demo-booking-form">
                                 <div class="form-field-wrapper">
@@ -1552,8 +1567,18 @@
                         </div>
                         <div id="w-node-d6aa8992-a836-8aea-3ccd-b98bd26c1b35-d23a40cb" class="div-block-183198052203">
                             <div class="div-block-183198052205">
-                                <div class="html-embed-41917 w-embed"><img src='/assets/icons/eligibility.svg' alt=''
-                                        loading='lazy' /></div>
+                                <div class="html-embed-41917 w-embed">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M9 12L11 14L15 10" stroke="#D4AF37" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7 7H17" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M7 17H13" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="div-block-183198052204">
                                 <div class="text-block-94128920">Eligibility</div>
@@ -1564,8 +1589,18 @@
                         </div>
                         <div id="w-node-d6aa8992-a836-8aea-3ccd-b98bd26c1b3f-d23a40cb" class="div-block-183198052203">
                             <div class="div-block-183198052205">
-                                <div class="html-embed-41917 w-embed"><img src='/assets/icons/online.svg' alt=''
-                                        loading='lazy' /></div>
+                                <div class="html-embed-41917 w-embed">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 16V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V16M4 16H20M4 16L3 19C3 19.5523 3.44772 20 4 20H20C20.5523 20 21 19.5523 21 19L20 16"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="div-block-183198052204">
                                 <div class="text-block-94128920">Online</div>
@@ -1575,8 +1610,15 @@
                         <div id="w-node-_15cebc3a-fb2f-f35f-776d-c6b55b2e8277-d23a40cb"
                             class="div-block-1831980521447044">
                             <div class="div-block-1831980521447045">
-                                <div class="html-embed-82605 w-embed"><img src='/assets/icons/support.svg' alt=''
-                                        loading='lazy' /></div>
+                                <div class="html-embed-82605 w-embed">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4 11V13C4 17.4183 7.58172 21 12 21C16.4183 21 20 17.4183 20 13V11M4 11C4 6.58172 7.58172 3 12 3C16.4183 3 20 6.58172 20 11M4 11H3C2.44772 11 2 11.4477 2 12V14C2 14.5523 2.44772 15 3 15H4M20 11H21C21.5523 11 22 11.4477 22 12V14C22 14.5523 21.5523 15 21 15H20M12 21V22M9 18C9 18.5523 9.44772 19 10 19H14C14.5523 19 15 18.5523 15 18"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="div-block-1831980521447046">
                                 <div class="div-block-183198052144700">
@@ -1604,9 +1646,9 @@
                     <div class="we-ve-worked-with-th-3">The All New Intensive 3.0 Upgrades to Supercharge Your Career
                     </div>
                     <div class="desktop-vector">
-                        <div class="vectors-wrapper-163 w-embed"><img
+                        <!-- <div class="vectors-wrapper-163 w-embed"><img
                                 src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/2.0-upgrades-underline-vector.png'
-                                alt='' height="11px" loading='lazy' /></div>
+                                alt='' height="11px" loading='lazy' /></div> -->
                     </div>
                     <div class="mobile-vector">
                         <div class="vectors-wrapper-163 w-embed"><img
@@ -1618,8 +1660,16 @@
                     <div id="upgradesContainer1" class="upgrades-container-1">
                         <div class="frame-1000004066">
                             <div class="frame-1000004068">
-                                <div class="html-embed-82606 w-embed"><img src='/assets/icons/live_sessions.svg' alt=''
-                                        width="80px" loading='lazy' /></div>
+                                <div class="html-embed-82606 w-embed">
+                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 10L19 7V17L15 14V10Z" stroke="#D4AF37" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M5 7H13C14.1046 7 15 7.89543 15 9V15C15 16.1046 14.1046 17 13 17H5C3.89543 17 3 16.1046 3 15V9C3 7.89543 3.89543 7 5 7Z"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
                                 <div class="frame-1000004070">
                                     <div class="user-research">Live Sessions (Monday to Friday)</div>
                                     <div class="we-take-pride-in-mak">To learn coding best practices, get interview
@@ -1628,8 +1678,18 @@
                                 </div>
                             </div>
                             <div class="frame-1000004068">
-                                <div class="html-embed-82606 w-embed"><img src='/assets/icons/success_coach.svg' alt=''
-                                        width="80px" loading='lazy' /></div>
+                                <div class="html-embed-82606 w-embed">
+                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                                 <div class="frame-1000004067">
                                     <div class="user-research">Dedicated Success Coach for Every Student</div>
                                     <div class="we-take-pride-in-mak">To guide you and ensure a smooth learning journey
@@ -1639,8 +1699,18 @@
                         </div>
                         <div class="frame-1000004066">
                             <div class="frame-1000004068">
-                                <div class="html-embed-82606 w-embed"><img src='/assets/icons/placement_manager.svg'
-                                        width="80px" alt='' loading='lazy' /></div>
+                                <div class="html-embed-82606 w-embed">
+                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M16 7V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V7"
+                                            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M12 12V16M9 14H15" stroke="#D4AF37" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
                                 <div class="frame-1000004070">
                                     <div class="user-research">Placement Success Manager</div>
                                     <div class="we-take-pride-in-mak">To give feedback on your interview performance and
@@ -1748,10 +1818,9 @@
                 <div class="best-alumni-div-2">
                     <div class="div-block-1831980521414">
                         <h4 class="heading-sathosi-font font-size-48">Your Trainers are Alumni of</h4>
-                        <div loading="lazy" class="your-triners-underline"></div>
+                        <!-- <div loading="lazy" class="your-triners-underline"></div> -->
                     </div>
-                    <div class="html-embed-41936 w-embed"><img
-                            src='https://nxtwave.imgix.net/ccbp-website/intensive/learn-the-best-from-the-alumni/Alumni_2x.png'
+                    <div class="html-embed-41936 w-embed"><img src='assets/images/Alumni.avif'
                             alt='learn from best alumni' width='100%' loading='lazy' /></div>
                     <div class="html-embed-41935 w-embed"><img
                             src='https://nxtwave.imgix.net/ccbp-website/intensive/learn-the-best-from-the-alumni/alumni-mobile.png'
@@ -4003,14 +4072,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -4892,14 +4961,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -5182,14 +5251,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -5466,14 +5535,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -6188,14 +6257,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -7091,14 +7160,14 @@
                                                 fill="none" class="svg-84">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                         <div id="right-button" loading="lazy" class="right-button"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32"
                                                 fill="none" class="svg-83">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.6686 23.5314C11.0438 22.9065 11.0438 21.8935 11.6686 21.2686L16.9373 16L11.6686 10.7314C11.0438 10.1065 11.0438 9.09347 11.6686 8.46863C12.2935 7.84379 13.3065 7.84379 13.9314 8.46863L20.3314 14.8686C20.9562 15.4935 20.9562 16.5065 20.3314 17.1314L13.9314 23.5314C13.3065 24.1562 12.2935 24.1562 11.6686 23.5314Z"
-                                                    fill="#475569"></path>
+                                                    fill="#0A3131"></path>
                                             </svg></div>
                                     </div>
                                 </div>
@@ -7137,9 +7206,8 @@
                             <div class="section-heading-div">
                                 <h2 class="heading-sathosi-font font-size-48 width mobile-heading">Get Ready for Your IT
                                     Career<br />in 3 Steps</h2>
-                                <div class="html-embed-41922 w-embed"><img
-                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/3-steps-underline.svg'
-                                        alt='' loading='lazy' /></div>
+                                <!-- <div class="html-embed-41922 w-embed"><img src='assets/images/3-steps-underline.svg'
+                                        alt='' loading='lazy' /></div> -->
                                 <h2 class="heading-sathosi-font font-size-48 width desktop-heading">Get Ready for Your
                                     IT
                                     Career in 3 Steps</h2>
@@ -7187,25 +7255,42 @@
                                         <div class="div-block-183198052181">
                                             <div class="text-block-9412881916">Fundamentals</div>
                                             <div class="div-block-183198052172">
-                                                <div class="w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/clock.svg'
-                                                        alt='' loading='lazy' /></div>
+                                                <div class="w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-clock">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <polyline points="12 6 12 12 16 14" />
+                                                    </svg>
+                                                </div>
                                                 <div class="text-block-94124857">Duration: <span
                                                         class="text-block-94128904">2 Months</span></div>
                                             </div>
                                             <div class="div-block-183198052172">
-                                                <div class="html-embed-41907 w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/laptop-icon.svg'
-                                                        alt='' width='100%' loading='lazy' /></div>
+                                                <div class="html-embed-41907 w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-laptop">
+                                                        <path
+                                                            d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+                                                    </svg>
+                                                </div>
                                                 <div class="text-block-94128904">3 Hours Classes and 3 Hours Labs per
                                                     day
                                                 </div>
                                             </div>
                                             <div class="div-block-183198052172">
-                                                <div class="html-embed-41907 w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/book.svg'
-                                                        alt='Clarify your doubts by Domain Experts' width='100%'
-                                                        loading='lazy' /></div>
+                                                <div class="html-embed-41907 w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-book-open">
+                                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                                    </svg>
+                                                </div>
                                                 <div class="text-block-94128904">Courses Include</div>
                                             </div>
                                             <div>
@@ -7213,50 +7298,90 @@
                                                     <div id="w-node-fc306785-3ec7-bb92-3112-24894182b43e-4182b406"
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
-                                                            <div class="html-embed-41908 w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/html.png'
-                                                                    alt='' width='100%' loading='lazy' /></div>
+                                                            <div class="html-embed-41908 w-embed">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="#D4AF37" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-code">
+                                                                    <polyline points="16 18 22 12 16 6" />
+                                                                    <polyline points="8 6 2 12 8 18" />
+                                                                </svg>
+                                                            </div>
                                                             <div class="text-block-94128905">HTML</div>
                                                         </div>
                                                     </div>
                                                     <div id="w-node-fc306785-3ec7-bb92-3112-24894182b443-4182b406"
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
-                                                            <div class="html-embed-41908 w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/css.png'
-                                                                    alt='' width='100%' loading='lazy' /></div>
+                                                            <div class="html-embed-41908 w-embed">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="#0A3131" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-file-code">
+                                                                    <path
+                                                                        d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                                                    <path
+                                                                        d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                                                </svg>
+                                                            </div>
                                                             <div class="text-block-94128905">CSS</div>
                                                         </div>
                                                     </div>
                                                     <div id="w-node-fc306785-3ec7-bb92-3112-24894182b448-4182b406"
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
-                                                            <div class="html-embed-41908 w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/python.png'
-                                                                    alt='' width='100%' loading='lazy' /></div>
+                                                            <div class="html-embed-41908 w-embed">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="#0A3131" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-terminal">
+                                                                    <polyline points="4 17 10 11 4 5" />
+                                                                    <line x1="12" x2="20" y1="19" y2="19" />
+                                                                </svg>
+                                                            </div>
                                                             <div class="text-block-94128905">Python</div>
                                                         </div>
                                                     </div>
                                                     <div id="w-node-fc306785-3ec7-bb92-3112-24894182b44d-4182b406"
                                                         class="div-block-183198052173">
                                                         <div class="div-block-183198052174">
-                                                            <div class="html-embed-41908 w-embed"><img
-                                                                    src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/sql.png'
-                                                                    alt='' width='100%' loading='lazy' /></div>
+                                                            <div class="html-embed-41908 w-embed">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="#D4AF37" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-database">
+                                                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                                                </svg>
+                                                            </div>
                                                             <div class="text-block-94128905">SQL</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="div-block-183198052172">
-                                                <div class="html-embed-41907 w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/clipboard-icon.svg'
-                                                        alt='Clarify your doubts by Domain Experts' width='100%'
-                                                        loading='lazy' /></div>
+                                                <div class="html-embed-41907 w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-clipboard-list">
+                                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                                        <path
+                                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                                        <path d="M12 11h4" />
+                                                        <path d="M12 16h4" />
+                                                        <path d="M8 11h.01" />
+                                                        <path d="M8 16h.01" />
+                                                    </svg>
+                                                </div>
                                                 <div class="text-block-94128904">Fundamentals Exam</div>
                                             </div><a id="view-curriculum-fundamentals" rel="nofollow"
-                                                view-curriculum="fundamentals-curriculum" popup="true"
-                                                href="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/fundamentals-curriculum-intensive.pdf"
+                                                view-curriculum="fundamentals-curriculum" popup="true" href="#"
                                                 target="_blank" class="link-block-597 track-button w-inline-block">
                                                 <div>View Curriculum</div>
                                                 <div class="view-curriculum-arrow"></div>
@@ -7268,18 +7393,18 @@
                                                 <div class="mask-43 w-slider-mask">
                                                     <div class="slide-83 w-slide">
                                                         <div class="html-embed-41909 w-embed"><img
-                                                                src='https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/food-munch-project-status.png'
+                                                                src='assets/images/food-munch-project-status.avif'
                                                                 alt='' width='100%' loading='lazy' /></div>
                                                     </div>
                                                     <div class="slide-83 w-slide">
                                                         <div class="html-embed-41909 w-embed"><img
-                                                                src='https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/website-chat-project-status.png'
-                                                                alt='' width='100%' loading='lazy' /></div>
+                                                                src='assets/images/slider2.png' alt='' width='100%'
+                                                                loading='lazy' /></div>
                                                     </div>
                                                     <div class="slide-83 w-slide">
                                                         <div class="slider-image w-embed"><img
-                                                                src='https://nxtwave.imgix.net/ccbp-website/intensive/slider-fundamenatils-image.png'
-                                                                alt='' width='100%' loading='lazy' /></div>
+                                                                src='assets/images/slider1.png' alt='' width='100%'
+                                                                loading='lazy' /></div>
                                                     </div>
                                                 </div>
                                                 <div class="left-arrow-12356 w-slider-arrow-left">
@@ -7304,15 +7429,32 @@
                                                 <div class="div-block-1831980521447319">
                                                     <div class="text-block-94128819917">OPTION 1</div>
                                                     <div class="text-block-94128819928">MERN Full Stack</div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce0585e2088c3ea5f6407_course-duration.svg"
-                                                            loading="lazy" alt="course duration" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-calendar-clock">
+                                                            <path
+                                                                d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
+                                                            <path d="M16 2v4" />
+                                                            <path d="M8 2v4" />
+                                                            <path d="M3 10h5" />
+                                                            <circle cx="17.5" cy="17.5" r="3.5" />
+                                                            <path d="M19 19l-1.5-1.5" />
+                                                        </svg>
                                                         <div class="text-block-941288239910 child">Duration: <span
                                                                 class="text-block-94128819930">6 Months</span></div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce058b9a90e00ef416aee_fresher-salary.svg"
-                                                            loading="lazy" alt="fresher salary" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-banknote">
+                                                            <rect width="20" height="12" x="2" y="6" rx="2" />
+                                                            <circle cx="12" cy="12" r="2" />
+                                                            <path d="M6 12h.01M18 12h.01" />
+                                                        </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
                                                                 :<br />In
@@ -7322,25 +7464,55 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069237834b9ae4e6c83_reat-time-projects.svg"
-                                                            loading="lazy" alt="real time projects" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-briefcase">
+                                                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                                        </svg>
                                                         <div class="text-block-94128819930">Real-time project</div>
                                                     </div>
-                                                    <div class="div-block-1831980521447326"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069cd2f43c2e7ded321_mongo-db.svg"
-                                                            loading="lazy" alt="mongo db" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce05870df5f121652d750_express-js.svg"
-                                                            loading="lazy" alt="express js" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce06939e31c5511a175ad_react-js.svg"
-                                                            loading="lazy" alt="react js" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069f1102598f6d3fafe_node-js.svg"
-                                                            loading="lazy" alt="node js" /></div><a
-                                                        id="view-curriculum-mern-full-stack" rel="nofollow"
+                                                    <div class="div-block-1831980521447326"
+                                                        style="display: flex; gap: 8px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-database">
+                                                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-server">
+                                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                                                            <line x1="6" x2="6.01" y1="6" y2="6" />
+                                                            <line x1="6" x2="6.01" y1="18" y2="18" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-atom">
+                                                            <circle cx="12" cy="12" r="1" />
+                                                            <path
+                                                                d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.53-11.9-4.49-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.53 11.9 4.49z" />
+                                                            <path
+                                                                d="M15.7 15.7c4.52-4.54 6.53-9.87 4.49-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.53 9.87-4.49 11.9 2.03 2.04 7.36.02 11.9-4.5z" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-hexagon">
+                                                            <path
+                                                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                                        </svg>
+                                                    </div><a id="view-curriculum-mern-full-stack" rel="nofollow"
                                                         view-curriculum="mern-fullstack-curriculum-intensive"
-                                                        popup="true"
-                                                        href="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/mern-fullstack-curriculum-intensive.pdf"
-                                                        target="_blank"
+                                                        popup="true" href="#" target="_blank"
                                                         class="link-block-597 track-button w-inline-block">
                                                         <div>View Curriculum</div>
                                                         <div class="view-curriculum-arrow"></div>
@@ -7354,15 +7526,32 @@
                                                 <div class="div-block-1831980521447319">
                                                     <div class="text-block-94128819917 orange">OPTION 2</div>
                                                     <div class="text-block-94128819928">Java Full Stack</div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce0585e2088c3ea5f6407_course-duration.svg"
-                                                            loading="lazy" alt="course duration" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-calendar-clock">
+                                                            <path
+                                                                d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
+                                                            <path d="M16 2v4" />
+                                                            <path d="M8 2v4" />
+                                                            <path d="M3 10h5" />
+                                                            <circle cx="17.5" cy="17.5" r="3.5" />
+                                                            <path d="M19 19l-1.5-1.5" />
+                                                        </svg>
                                                         <div class="text-block-941288239910 child">Duration: <span
                                                                 class="text-block-94128819930">6 Months</span></div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce058b9a90e00ef416aee_fresher-salary.svg"
-                                                            loading="lazy" alt="fresher salary" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-banknote">
+                                                            <rect width="20" height="12" x="2" y="6" rx="2" />
+                                                            <circle cx="12" cy="12" r="2" />
+                                                            <path d="M6 12h.01M18 12h.01" />
+                                                        </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
                                                                 :<br />In
@@ -7372,22 +7561,50 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069237834b9ae4e6c83_reat-time-projects.svg"
-                                                            loading="lazy" alt="real time projects" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-briefcase">
+                                                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                                        </svg>
                                                         <div class="text-block-94128819930">Real-time project</div>
                                                     </div>
-                                                    <div class="div-block-1831980521447326"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce06939e31c5511a175ad_react-js.svg"
-                                                            loading="lazy" alt="react js" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce06939cc19b1b4129373_react-original%208.svg"
-                                                            loading="lazy" alt="java" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce06a296b9db18c9100de_spring-boot.svg"
-                                                            loading="lazy" alt="spring boot" /></div><a
-                                                        id="view-curriculum-java-full-stack" rel="nofollow"
+                                                    <div class="div-block-1831980521447326"
+                                                        style="display: flex; gap: 8px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-atom">
+                                                            <circle cx="12" cy="12" r="1" />
+                                                            <path
+                                                                d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.53-11.9-4.49-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.53 11.9 4.49z" />
+                                                            <path
+                                                                d="M15.7 15.7c4.52-4.54 6.53-9.87 4.49-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.53 9.87-4.49 11.9 2.03 2.04 7.36.02 11.9-4.5z" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-coffee">
+                                                            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+                                                            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                                                            <line x1="6" x2="6" y1="2" y2="4" />
+                                                            <line x1="10" x2="10" y1="2" y2="4" />
+                                                            <line x1="14" x2="14" y1="2" y2="4" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-leaf">
+                                                            <path
+                                                                d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                                                            <path
+                                                                d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                                                        </svg>
+                                                    </div><a id="view-curriculum-java-full-stack" rel="nofollow"
                                                         view-curriculum="java-fullstack-curriculum" popup="true"
-                                                        href="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/java-fullstack-curriculum.pdf"
-                                                        target="_blank"
+                                                        href="#" target="_blank"
                                                         class="link-block-597 track-button w-inline-block">
                                                         <div>View Curriculum</div>
                                                         <div class="view-curriculum-arrow"></div>
@@ -7401,15 +7618,32 @@
                                                 <div class="div-block-1831980521447319">
                                                     <div class="text-block-94128819917 volite">OPTION 3</div>
                                                     <div class="text-block-94128819928">QA/Automation Testing</div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce0585e2088c3ea5f6407_course-duration.svg"
-                                                            loading="lazy" alt="course duration" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-calendar-clock">
+                                                            <path
+                                                                d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
+                                                            <path d="M16 2v4" />
+                                                            <path d="M8 2v4" />
+                                                            <path d="M3 10h5" />
+                                                            <circle cx="17.5" cy="17.5" r="3.5" />
+                                                            <path d="M19 19l-1.5-1.5" />
+                                                        </svg>
                                                         <div class="text-block-941288239910 child">Duration: <span
                                                                 class="text-block-94128819930">3 Months</span></div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce058b9a90e00ef416aee_fresher-salary.svg"
-                                                            loading="lazy" alt="fresher salary" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-banknote">
+                                                            <rect width="20" height="12" x="2" y="6" rx="2" />
+                                                            <circle cx="12" cy="12" r="2" />
+                                                            <path d="M6 12h.01M18 12h.01" />
+                                                        </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
                                                                 :<br />In
@@ -7419,17 +7653,29 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069237834b9ae4e6c83_reat-time-projects.svg"
-                                                            loading="lazy" alt="real time projects" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-briefcase">
+                                                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                                        </svg>
                                                         <div class="text-block-94128819930">Real-time project</div>
-                                                    </div><img
-                                                        src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce06a41249f4a8daf48e3_selenium.svg"
-                                                        loading="lazy" alt="spring boot" class="image-8128822190" /><a
-                                                        id="view-curriculum-qa-testing-full-stack" rel="nofollow"
+                                                    </div>
+                                                    <div style="margin-top: 10px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-flask-conical">
+                                                            <path
+                                                                d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+                                                            <path d="M8.5 2h7" />
+                                                            <path d="M7 16h10" />
+                                                        </svg>
+                                                    </div><a id="view-curriculum-qa-testing-full-stack" rel="nofollow"
                                                         view-curriculum="qa-testing-curriculum-intensive" popup="true"
-                                                        href="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/qa-testing-curriculum-intensive-v2.pdf"
-                                                        target="_blank"
+                                                        href="#" target="_blank"
                                                         class="link-block-597 track-button w-inline-block">
                                                         <div>View Curriculum</div>
                                                         <div class="view-curriculum-arrow"></div>
@@ -7445,15 +7691,32 @@
                                                 <div class="div-block-1831980521447319">
                                                     <div class="text-block-94128819917 green">OPTION 4</div>
                                                     <div class="text-block-94128819928">Data Analytics</div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce0585e2088c3ea5f6407_course-duration.svg"
-                                                            loading="lazy" alt="course duration" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-calendar-clock">
+                                                            <path
+                                                                d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
+                                                            <path d="M16 2v4" />
+                                                            <path d="M8 2v4" />
+                                                            <path d="M3 10h5" />
+                                                            <circle cx="17.5" cy="17.5" r="3.5" />
+                                                            <path d="M19 19l-1.5-1.5" />
+                                                        </svg>
                                                         <div class="text-block-941288239910 child">Duration: <span
                                                                 class="text-block-94128819930">3 Months</span></div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce058b9a90e00ef416aee_fresher-salary.svg"
-                                                            loading="lazy" alt="fresher salary" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-banknote">
+                                                            <rect width="20" height="12" x="2" y="6" rx="2" />
+                                                            <circle cx="12" cy="12" r="2" />
+                                                            <path d="M6 12h.01M18 12h.01" />
+                                                        </svg>
                                                         <div class="div-block-1831980521447321">
                                                             <div class="text-block-94124857-copy">Fresher Salaries
                                                                 :<br />In
@@ -7463,20 +7726,37 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="div-block-1831980521447328"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069237834b9ae4e6c83_reat-time-projects.svg"
-                                                            loading="lazy" alt="real time projects" />
+                                                    <div class="div-block-1831980521447328">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-briefcase">
+                                                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                                        </svg>
                                                         <div class="text-block-94128819930">Real-time project</div>
                                                     </div>
-                                                    <div class="div-block-1831980521447326"><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069bf5cc7d1c3bafbc7_power-bi.svg"
-                                                            loading="lazy" alt="power bi" /><img
-                                                            src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/667ce069b3f2eba435c2915e_tableau.svg"
-                                                            loading="lazy" alt="tableau" /></div><a
-                                                        id="view-curriculum-data-analytics-full-stack" rel="nofollow"
-                                                        view-curriculum="data-analytics" popup="true"
-                                                        href="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/data-analytics-intensive-curriculum.pdf"
-                                                        target="_blank"
+                                                    <div class="div-block-1831980521447326"
+                                                        style="display: flex; gap: 8px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-bar-chart-3">
+                                                            <path d="M3 3v18h18" />
+                                                            <path d="M18 17V9" />
+                                                            <path d="M13 17V5" />
+                                                            <path d="M8 17v-3" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#D4AF37"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-pie-chart">
+                                                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                                                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                                                        </svg>
+                                                    </div><a id="view-curriculum-data-analytics-full-stack"
+                                                        rel="nofollow" view-curriculum="data-analytics" popup="true"
+                                                        href="#" target="_blank"
                                                         class="link-block-597 track-button w-inline-block">
                                                         <div>View Curriculum</div>
                                                         <div class="view-curriculum-arrow"></div>
@@ -7646,65 +7926,164 @@
                                             <div class="inter-600-font-16px">Free Add-ons:</div>
                                             <div class="div-block-183198052179 width-auto">
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/Aptitude.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-brain-circuit">
+                                                            <path
+                                                                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                                                            <path
+                                                                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                                                            <path d="M15 13v-3" />
+                                                            <path d="M9 13v-3" />
+                                                            <path d="M7 9h2" />
+                                                            <path d="M15 9h2" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Aptitude Training</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/soft-skills-coaching.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-messages-square">
+                                                            <path
+                                                                d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
+                                                            <path
+                                                                d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Soft Skills Training</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/resume-preparation.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-file-user">
+                                                            <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                                                            <path d="M15 18a3 3 0 1 0-6 0" />
+                                                            <path
+                                                                d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                                                            <circle cx="12" cy="13" r="2" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Resume Preparation</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/3.0-upgrades-mock-interviews.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-bot">
+                                                            <path d="M12 8V4H8" />
+                                                            <rect width="16" height="12" x="4" y="8" rx="2" />
+                                                            <path d="M2 14h2" />
+                                                            <path d="M20 14h2" />
+                                                            <path d="M15 13v2" />
+                                                            <path d="M9 13v2" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">AI-Powered Mock Interviews</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/mock-interviews.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-users">
+                                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                            <circle cx="9" cy="7" r="4" />
+                                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Mock Interviews by<br />Tech and HR
                                                         Panels</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/scheduling.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-calendar-check">
+                                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                                            <path d="m9 16 2 2 4-4" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Scheduling Interviews</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/access-interview-experiences.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-file-stack">
+                                                            <path d="M21 7h-3a2 2 0 0 1-2-2V2" />
+                                                            <path
+                                                                d="M21 7v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3" />
+                                                            <path d="M16 2v5a2 2 0 0 0 2 2h3" />
+                                                            <path
+                                                                d="M14.5 2C15.8 2 17 3.2 17 4.5V9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4.5C3 3.2 4.2 2 5.5 2H14.5Z" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Access to 300+ Senior Interview
                                                         Experiences</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/access-placement-corner.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-layout-dashboard">
+                                                            <rect width="7" height="9" x="3" y="3" rx="1" />
+                                                            <rect width="7" height="5" x="14" y="3" rx="1" />
+                                                            <rect width="7" height="9" x="14" y="12" rx="1" />
+                                                            <rect width="7" height="5" x="3" y="16" rx="1" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Access to Placement Portal</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/3.0-upgrades-offline-drives.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-building-2">
+                                                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                                                            <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                                                            <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                                                            <path d="M10 6h4" />
+                                                            <path d="M10 10h4" />
+                                                            <path d="M10 14h4" />
+                                                            <path d="M10 18h4" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Mega Offline Placement Drives</div>
                                                 </div>
                                                 <div class="div-block-183198052178 grid-child-width">
-                                                    <div class="html-embed-41912 w-embed"><img
-                                                            src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/negotiation-with-companies.png'
-                                                            alt='' width='100%' loading='lazy' /></div>
+                                                    <div class="html-embed-41912 w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#0A3131"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="lucide lucide-hand-coins">
+                                                            <path
+                                                                d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
+                                                            <path
+                                                                d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
+                                                            <path d="m2 16 6 6" />
+                                                            <circle cx="16" cy="9" r="2.9" />
+                                                            <circle cx="6" cy="5" r="3" />
+                                                        </svg>
+                                                    </div>
                                                     <div class="text-block-94128905">Negotiation with companies<br />for
                                                         higher salaries</div>
                                                 </div>
@@ -7720,13 +8099,13 @@
                                         <div class="mask-48 w-slider-mask">
                                             <div class="slide-73 w-slide">
                                                 <div class="html-embed-41925 w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/placement-dashboard.png'
-                                                        alt='' width='100%' loading='lazy' /></div>
+                                                        src='assets/images/image2.png' alt='' width='100%'
+                                                        loading='lazy' /></div>
                                             </div>
                                             <div class="slide-73 w-slide">
                                                 <div class="html-embed-41925 w-embed"><img
-                                                        src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/mock-interview.png'
-                                                        alt='' width='100%' loading='lazy' style="padding:0px 17px" />
+                                                        src='assets/images/image3.png' alt='' width='100%'
+                                                        loading='lazy' style="padding:0px 17px" />
                                                 </div>
                                             </div>
                                         </div>
@@ -7848,16 +8227,16 @@
                 <div class="doubts-clarified-container">
                     <div class="dc-main-info-container">
                         <h2 class="h1c _475569">Get Your Doubts Clarified<br />Faster than in Offline Classes</h2>
-                        <div class="underline-light-violet"></div>
+                        <!-- <div class="underline-light-violet"></div> -->
                         <div class="inter-4-24-32 _64748b">Our highly motivated team of experts are ready to help you
                             with
                             your doubts from<span><strong>9AM - 9PM Everyday</strong></span></div>
                     </div>
                     <div class="dc-bafd-container">
                         <div class="dc-bafb-img-container">
-                            <div class="dc-bafd-illustartion w-embed"><img
-                                    src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/doubts-clarified-book-a-free-demo-illustration.png"
-                                    loading="lazy" style="width:auto"></div>
+                            <div class="dc-bafd-illustartion w-embed"><img src="assets/images/image5.png" loading="lazy"
+                                    style="width: 100%; height: auto; transform: scale(1.2); transform-origin: center;">
+                            </div>
                         </div>
                         <div class="dc-bafd-info-container">
                             <div class="dc-bafd-info-h">1500<span class="text-span-160">+</span> Mentors to Resolve Your
@@ -7880,9 +8259,9 @@
                             <div class="underline-yellow"></div>
                         </div>
                         <div class="dc-td-img-container">
-                            <div class="dc-td-illustration w-embed"><img
-                                    src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/doubts-clarified-doubts-illustartions.png"
-                                    loading="lazy" style="width:auto"></div>
+                            <div class="dc-td-illustration w-embed"><img src="assets/images/image4.png" loading="lazy"
+                                    style="width: 100%; height: auto; transform: scale(1.2); transform-origin: center;">
+                            </div>
                         </div>
                     </div>
                     <div class="collection-list-wrapper-4 w-dyn-list">
@@ -7919,9 +8298,9 @@
                     <h2 class="heading-sathosi-font width font-size-24-copy">Trusted by Thousands to Become IT
                         Professionals
                     </h2>
-                    <div class="trusted-by-under-line w-embed"><img
+                    <!-- <div class="trusted-by-under-line w-embed"><img
                             src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/thousands-underline.svg'
-                            alt='' loading='lazy' /></div>
+                            alt='' loading='lazy' /></div> -->
                 </div>
                 <div>
                     <div class="div-block-21072 div1290">
@@ -8510,9 +8889,9 @@
                                 <div class="div-block-867-copy-2 div234">
                                     <h2 class="heading-sathosi-font font-size-48 center">2000+ Companies Hired
                                         Learners</h2>
-                                    <div class="_1500-companies-underline under-line w-embed"><img
+                                    <!-- <div class="_1500-companies-underline under-line w-embed"><img
                                             src='https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/intensive/1500-compines.svg'
-                                            alt='' loading='lazy' /></div>
+                                            alt='' loading='lazy' /></div> -->
                                 </div>
                             </div>
                         </div>
@@ -8543,7 +8922,7 @@
                                         align-items: center;
                                         gap: 24px;
                                         min-width: 100%;
-                                        animation: scroll 40s linear infinite;
+                                        animation: scroll 45s linear infinite;
                                         white-space: nowrap;
                                         overflow: hidden;
                                         overflow-x: -webkit-marquee;
@@ -8566,20 +8945,22 @@
                                     }
                                 </style>
                                 <div class="marquee1">
-
                                     <div class="marquee__group1">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-1.png"
-                                            loading='lazy'>
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 2">
                                     </div>
-
                                     <div aria-hidden="true" class="marquee__group1">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-1.png"
-                                            loading='lazy'>
-
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 2">
                                     </div>
-
                                 </div>
                             </div>
                             <div class="w-embed">
@@ -8608,7 +8989,7 @@
                                         align-items: center;
                                         gap: 24px;
                                         min-width: 100%;
-                                        animation: scroll 40s linear infinite;
+                                        animation: scroll 45s linear infinite;
                                         white-space: nowrap;
                                         overflow: hidden;
                                         overflow-x: -webkit-marquee;
@@ -8622,15 +9003,21 @@
                                 <div class="marquee2">
 
                                     <div class="marquee__group2">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-2.png"
-                                            loading='lazy'>
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 2">
                                     </div>
 
                                     <div aria-hidden="true" class="marquee__group2">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-2.png"
-                                            loading='lazy'>
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 2">
                                     </div>
 
                                 </div>
@@ -8661,7 +9048,7 @@
                                         align-items: center;
                                         gap: 24px;
                                         min-width: 100%;
-                                        animation: scroll 40s linear infinite;
+                                        animation: scroll 45s linear infinite;
                                         white-space: nowrap;
                                         overflow: hidden;
                                         overflow-x: -webkit-marquee;
@@ -8675,15 +9062,21 @@
                                 <div class="marquee3">
 
                                     <div class="marquee__group3">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-3.png"
-                                            loading='lazy'>
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 2">
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
                                     </div>
 
                                     <div aria-hidden="true" class="marquee__group3">
-                                        <img class="companies-img"
-                                            src="https://nxtwave.imgix.net/ccbp-website/nxtwave-intensive-2.0/company-scroll-strip-img-3.png"
-                                            loading='lazy'>
+                                        <img class="companies-img" src="assets/images/company-3.png" loading="lazy"
+                                            alt="Company 3">
+                                        <img class="companies-img" src="assets/images/company-2.png" loading="lazy"
+                                            alt="Company 2">
+                                        <img class="companies-img" src="assets/images/company-1.avif" loading="lazy"
+                                            alt="Company 1">
                                     </div>
 
                                 </div>
@@ -8702,8 +9095,7 @@
                                 <div class="dates-changing-ctas">
                                     <div class="embed-btn w-embed"><a id="compaines-book-a-demo" href="#hero-section"
                                             class="book-a-free-demo-main-btn track-class w-button">Book a free Demo</a>
-                                    </div><a id="view-all-companies-hiring-companies" rel="nofollow"
-                                        href="https://nxtwave.notion.site/nxtwave/4a5b98d9e45f4bba9526eb5084d84476?v=1b29091aa30946e5a5c2a86f75f2024b"
+                                    </div><a id="view-all-companies-hiring-companies" rel="nofollow" href="#"
                                         target="_blank" class="text-link-block track-class w-inline-block">
                                         <div>View All Companies</div>
                                     </a>
@@ -8806,27 +9198,37 @@
                                 <div class="comparison-content-div">
                                     <div class="w-embed"><img class="close-and-tick-marks-icons1"
                                             src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/tick-circle.png"
-                                            loading='lazy'></div>
+                                            loading='lazy'>
+                                        <style>
+                                            .close-and-tick-marks-icons1 {
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
+                                            }
+                                        </style>
+                                    </div>
                                 </div>
                                 <div class="comparison-content-div">
                                     <div class="w-embed"><img class="close-and-tick-marks-icons1"
                                             src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/tick-circle.png"
                                             loading='lazy'>
-
                                         <style>
                                             .close-and-tick-marks-icons1 {
-                                                height: 48px;
-                                                width: 48px;
-                                            }
-
-                                            @media (min-width: 320px) and (max-width: 767px) {
-                                                .close-and-tick-marks-icons1 {
-                                                    height: 32px;
-                                                    width: 32px;
-                                                }
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
                                             }
                                         </style>
                                     </div>
+                                </div>
+                                <div class="comparison-content-div">
+                                    <div class="w-embed"><img class="close-and-tick-marks-icons1"
+                                            src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/tick-circle.png"
+                                            loading='lazy'>
+                                        <style>
+                                            .close-and-tick-marks-icons1 {
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                                <div class="comparison-content-div">
                                     <div class="comparison-txt">For higher salaries</div>
                                 </div>
                             </div>
@@ -8882,17 +9284,35 @@
                                 <div class="comparison-content-div">
                                     <div class="w-embed"><img class="close-and-tick-marks-icons1"
                                             src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/close-circle.png"
-                                            loading='lazy'></div>
+                                            loading='lazy'>
+                                        <style>
+                                            .close-and-tick-marks-icons1 {
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
+                                            }
+                                        </style>
+                                    </div>
                                 </div>
                                 <div class="comparison-content-div">
                                     <div class="w-embed"><img class="close-and-tick-marks-icons1"
                                             src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/close-circle.png"
-                                            loading='lazy'></div>
+                                            loading='lazy'>
+                                        <style>
+                                            .close-and-tick-marks-icons1 {
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
+                                            }
+                                        </style>
+                                    </div>
                                 </div>
                                 <div class="comparison-content-div">
                                     <div class="w-embed"><img class="close-and-tick-marks-icons1"
                                             src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxtwave-intensive-2.0/close-circle.png"
-                                            loading='lazy'></div>
+                                            loading='lazy'>
+                                        <style>
+                                            .close-and-tick-marks-icons1 {
+                                                filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(1450%) hue-rotate(1deg) brightness(94%) contrast(91%);
+                                            }
+                                        </style>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -9352,6 +9772,21 @@ https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/nxt
                                         </div>
                                         <div class="pricing-logo w-embed">
                                             <style>
+                                                /* #training-details-tab-faqs,
+                                                #eligibility-tab-faqs {
+                                                    color: #D4AF37 !important;
+                                                    border-left: 1px solid #D4AF37 !important;
+                                                } */
+                                                #view-all-reviews-your-seniors-got-placed,
+                                                #view-curriculum-fundamentals,
+                                                #view-all-companies-hiring-companies,
+                                                #view-curriculum-java-full-stack,
+                                                #view-curriculum-mern-full-stack,
+                                                #view-curriculum-data-analytics-full-stack,
+                                                #view-curriculum-qa-testing-full-stack {
+                                                    color: #0A3131 !important;
+                                                }
+
                                                 .ribbon-glow {
                                                     animation: flow 1.5s linear infinite;
                                                 }

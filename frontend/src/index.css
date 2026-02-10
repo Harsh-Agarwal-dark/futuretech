@@ -7,9 +7,15 @@
 
 :root {
   /* Default: Light/Professional Theme */
-  --primary: #7C3AED;
-  --primary-hover: #6D28D9;
-  --primary-glow: rgba(124, 58, 237, 0.1);
+  --primary: #0A3131;
+  /* Deep Teal */
+  --primary-hover: #0d4242;
+  /* Darker Teal */
+  --primary-glow: rgba(10, 49, 49, 0.1);
+  --accent: #D4AF37;
+  /* Antique Gold */
+  --accent-hover: #F8E71C;
+  /* Traditional Gold (Brighter) */
 
   /* Clean Professional Palette */
   --bg-main: #F9FAFB;
@@ -38,9 +44,10 @@
 
 /* Light Theme (Day Mode) - Soft Alabaster */
 [data-theme="light"] {
-  --primary: #7C3AED;
-  --primary-hover: #6D28D9;
-  --primary-glow: rgba(124, 58, 237, 0.15);
+  --primary: #0A3131;
+  --primary-hover: #0d4242;
+  --primary-glow: rgba(10, 49, 49, 0.15);
+  --accent: #D4AF37;
 
   /* Soft Alabaster background with light gray borders */
   --bg-main: #FBFBFB;
@@ -65,10 +72,12 @@
 
 /* Dark Theme (Night Mode) */
 [data-theme="dark"] {
-  --primary: #8B5CF6;
-  /* Slightly lighter violet for dark mode contrast */
-  --primary-hover: #7C3AED;
-  --primary-glow: rgba(139, 92, 246, 0.3);
+  --primary: #4FD1C5;
+  /* Lighter Teal/Cyan for dark mode contrast */
+  --primary-hover: #2DD4BF;
+  --primary-glow: rgba(79, 209, 197, 0.3);
+  --accent: #F1C40F;
+  /* Brighter Gold */
 
   /* Deep Space / Night Backgrounds */
   --bg-main: #0F172A;

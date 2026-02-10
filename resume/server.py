@@ -10,6 +10,7 @@ from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 import json
 import traceback
+import datetime
 
 # from config import GROQ_API_KEY (Removed to avoid ModuleNotFoundError on Railway)
 from src.utils.llm_client import LLMClient
@@ -292,6 +293,58 @@ async def capture_lead(lead: LeadCapture, background_tasks: BackgroundTasks):
         # If it's already an HTTPException, re-raise it
         if isinstance(e, HTTPException):
             raise e
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ... (Previous code)
+
+# --- User Profile Endpoints ---
+
+class UserProfileRequest(BaseModel):
+    user_id: str
+    profile_data: Dict[str, Any]
+
+@app.post("/api/profile")
+async def save_user_profile(request: UserProfileRequest):
+    """
+    Upserts user profile data into Supabase `user_profiles` table.
+    """
+    try:
+        supabase = get_supabase_client()
+        
+        # Prepare data for upsert
+        data = {
+            "user_id": request.user_id,
+            "profile_data": request.profile_data,
+            "updated_at": datetime.datetime.now().isoformat()
+        }
+        
+        # Perform upsert
+        response = supabase.table("user_profiles").upsert(data).execute()
+        
+        return {"status": "success", "message": "Profile saved successfully", "data": response.data}
+
+    except Exception as e:
+        print(f"❌ Error saving profile: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/profile/{user_id}")
+async def get_user_profile(user_id: str):
+    """
+    Fetches user profile data from Supabase.
+    """
+    try:
+        supabase = get_supabase_client()
+        
+        response = supabase.table("user_profiles").select("profile_data").eq("user_id", user_id).execute()
+        
+        if not response.data:
+            return {"status": "success", "profile_data": None}
+            
+        return {"status": "success", "profile_data": response.data[0]["profile_data"]}
+
+    except Exception as e:
+        print(f"❌ Error fetching profile: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":

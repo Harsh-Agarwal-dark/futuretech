@@ -20,6 +20,7 @@ class Settings:
     SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
     
     # Google Sheets Settings
+    GOOGLE_SHEET_ID = os.getenv("GOOGLE_SHEET_ID", "ENTER_YOUR_SHEET_ID_HERE")
     GOOGLE_SHEET_NAME = os.getenv("GOOGLE_SHEET_NAME", "FutureTech_Data")
     
     # AI Configuration

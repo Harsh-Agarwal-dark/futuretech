@@ -67,15 +67,19 @@ def get_google_credentials(scopes=None, impersonate_service_account=None):
     if impersonate_service_account:
         print(f"👤 Impersonating service account: {impersonate_service_account}")
         
-        # We need a Request object for the refresh
-        auth_request = Request()
+        # Define scopes for the impersonated credentials
+        target_scopes = scopes or [
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/drive"
+        ]
         
         credentials = ImpersonatedCredentials(
             source_credentials=credentials,
             target_principal=impersonate_service_account,
-            target_scopes=scopes or ["https://www.googleapis.com/auth/cloud-platform"],
+            target_scopes=target_scopes,
             lifetime=3600
         )
-        # credentials.refresh(auth_request) # Optional here, will refresh on use
+        # Force refresh to verify credentials immediately
+        # credentials.refresh(Request()) 
         
     return credentials

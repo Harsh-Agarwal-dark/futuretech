@@ -10,9 +10,12 @@ import ResumePreview from '../components/ResumePreview'
 import { processResume, generateResumePDF, getResume, saveResume } from '../utils/api'
 import { showToast } from '../utils/toast'
 
+import { useAuth } from '../context/AuthContext'
+
 function BuilderPage() {
     const [searchParams] = useSearchParams()
     const navigate = useNavigate()
+    const { user } = useAuth()
     const resumeId = searchParams.get('id')
 
     const [activeSection, setActiveSection] = useState('personal_info')
@@ -55,8 +58,35 @@ function BuilderPage() {
                 }
             };
             loadResume();
+        } else {
+            // New Resume: Prefill from User Profile
+            const prefillProfile = async () => {
+                if (!user?.id) return;
+
+                try {
+                    const response = await fetch(`http://localhost:8000/api/profile/${user.id}`);
+                    const result = await response.json();
+
+                    if (result.status === 'success' && result.profile_data) {
+                        setResumeData(prev => ({
+                            ...prev,
+                            personal_info: {
+                                ...prev.personal_info,
+                                ...result.profile_data.personal_info
+                            },
+                            education: result.profile_data.education || [],
+                            experience: result.profile_data.experience || [],
+                            projects: result.profile_data.projects || []
+                        }));
+                        showToast.success('Resume prefilled from your profile!');
+                    }
+                } catch (error) {
+                    console.error('Failed to prefill profile:', error);
+                }
+            };
+            prefillProfile();
         }
-    }, [resumeId]);
+    }, [resumeId, user?.id]);
 
     const handleDataChange = (section, data) => {
         setResumeData(prev => ({ ...prev, [section]: data }))
@@ -159,7 +189,7 @@ function BuilderPage() {
 
                         {analysisFeedback && (
                             <div className="card" style={{ padding: '1.5rem', marginTop: '1.5rem', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
-                                <h4 style={{ color: '#2563eb', marginBottom: '1rem' }}>AI Analysis Feedback</h4>
+                                <h4 style={{ color: '#0A3131', marginBottom: '1rem' }}>AI Analysis Feedback</h4>
                                 {analysisFeedback.match_explanation && (
                                     <div style={{ marginBottom: '1rem', fontSize: '0.9rem' }}>
                                         <strong>Job Match Explanation:</strong>

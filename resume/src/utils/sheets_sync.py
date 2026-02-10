@@ -23,36 +23,55 @@ def sync_lead_to_sheets(lead_data: dict):
     lead_data schema: {full_name, whatsapp_number, highest_qualification, native_state, created_at}
     """
     try:
+        # Use simple keyless AUTH with the specific Service Account
         client = get_sheets_client()
-        spreadsheet = client.open(SHEET_NAME)
         
+        # Logic change: Open by Key instead of Name for robustness
+        # Try opening by ID first if configured
+        sheet_id = settings.GOOGLE_SHEET_ID
+        spreadsheet = None
+        
+        if sheet_id and "ENTER_YOUR" not in sheet_id:
+            try:
+                spreadsheet = client.open_by_key(sheet_id)
+            except Exception as e:
+                print(f"⚠️ Failed to open via ID {sheet_id}, falling back to name: {e}")
+
+        # Fallback to name if ID failed or not set
+        if not spreadsheet:
+            try:
+                print(f"ℹ️ Opening by name: {settings.GOOGLE_SHEET_NAME}")
+                spreadsheet = client.open(settings.GOOGLE_SHEET_NAME)
+            except Exception as e:
+                print(f"❌ Failed to open spreadsheet by Name {settings.GOOGLE_SHEET_NAME}: {e}")
+                return
+
         try:
             worksheet = spreadsheet.worksheet(LEADS_TAB_NAME)
         except gspread.exceptions.WorksheetNotFound:
             # Create worksheet if it doesn't exist
+            print(f"⚠️ Worksheet '{LEADS_TAB_NAME}' not found. Creating it...")
             worksheet = spreadsheet.add_worksheet(title=LEADS_TAB_NAME, rows="100", cols="6")
             # Add headers
-            worksheet.append_row(["Timestamp", "Full Name", "WhatsApp Number", "Highest Qualification", "Native State", "Supabase Created At"])
+            worksheet.append_row(["Timestamp", "Full Name", "WhatsApp Number", "Highest Qualification", "Native State"])
 
-        # Prepare row data
+        # Prepare row data [Timestamp, Name, WhatsApp, Qualification, State]
+        # Timestmap is the current time of sync
         row = [
             datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             lead_data.get("full_name"),
             lead_data.get("whatsapp_number"),
             lead_data.get("highest_qualification"),
-            lead_data.get("native_state"),
-            lead_data.get("created_at")
+            lead_data.get("native_state")
         ]
         
         worksheet.append_row(row)
         print(f"✅ Lead synced to Google Sheet: {lead_data.get('full_name')}")
         
-        # Check for archival
-        check_and_archive_leads(worksheet, spreadsheet)
-        
     except Exception as e:
         print(f"❌ Google Sheets Sync Error: {e}")
-        # We don't raise here as per requirement: "If the Sheet sync fails, the user should still see a success message"
+        # Critical: valid request must not crash if sheets fails
+
 
 def check_and_archive_leads(worksheet, spreadsheet):
     """
