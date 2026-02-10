@@ -94,7 +94,7 @@ const SignupPage = () => {
                     </Link>
                 </div>
 
-                <div className="social-login-section">
+                {/* <div className="social-login-section">
                     <div className="social-label">Or join with</div>
                     <div className="social-buttons">
                         <button type="button" className="social-btn google-btn">
@@ -116,7 +116,7 @@ const SignupPage = () => {
                             </svg>
                         </button>
                     </div>
-                </div>
+                </div> */}
             </form>
         </AuthLayout>
     );
