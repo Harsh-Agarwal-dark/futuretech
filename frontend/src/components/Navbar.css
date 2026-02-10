@@ -168,6 +168,8 @@
     .brand-9 {
         margin-right: 300px !important;
         /* 300px margin for React app */
+        margin-top: -10px !important;
+        /* Move logo slightly up */
     }
 
     .brand-9 img {
